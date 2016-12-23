@@ -56,11 +56,14 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="addcustomer.aspx" />
+    <Content Include="addmonthlypaid.aspx" />
     <Content Include="addroom.aspx" />
     <Content Include="addroomtype.aspx" />
     <Content Include="adminhome.aspx" />
     <Content Include="customerlist.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="monthlypaidlist.aspx" />
+    <Content Include="monthlytransaction.aspx" />
     <Content Include="rentin.aspx" />
     <Content Include="rentout.aspx" />
     <Content Include="roomlist.aspx" />
@@ -127,6 +130,13 @@
     <Compile Include="addcustomer.aspx.designer.cs">
       <DependentUpon>addcustomer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="addmonthlypaid.aspx.cs">
+      <DependentUpon>addmonthlypaid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addmonthlypaid.aspx.designer.cs">
+      <DependentUpon>addmonthlypaid.aspx</DependentUpon>
+    </Compile>
     <Compile Include="addroom.aspx.cs">
       <DependentUpon>addroom.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -171,6 +181,20 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="monthlypaidlist.aspx.cs">
+      <DependentUpon>monthlypaidlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="monthlypaidlist.aspx.designer.cs">
+      <DependentUpon>monthlypaidlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="monthlytransaction.aspx.cs">
+      <DependentUpon>monthlytransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="monthlytransaction.aspx.designer.cs">
+      <DependentUpon>monthlytransaction.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="rentin.aspx.cs">
