@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="addroomtype.aspx.cs" Inherits="Rent_HouseWeb.addroomtype" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="updatetransaction.aspx.cs" Inherits="Rent_HouseWeb.updatetransaction" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html>
 <head>
-<title>Rent House Admin Panel | Add Room Type</title>
+<title>Rent House Admin Panel | Add Room </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -188,7 +188,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h2>
 				<a href="adminhome.aspx">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Add Room Type</span>
+				<span>Add Room </span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -200,18 +200,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 				
 					<div class="grid-form1">
-                        <h3 id="forms-horizontal">Add Room Type Form</h3>
+                        <h3 id="forms-horizontal">Rent In Form</h3>
                         <form id="Form1" class="form-horizontal" runat="server">
                           <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label hor-form">ID Room Type</label>
+                            <label for="inputEmail3" class="col-sm-2 control-label hor-form">ID Transaction</label>
                             <div class="col-sm-10">
-                              <asp:TextBox type="text" CssClass="form-control" ID="tb_id" placeholder="Name of Customer" runat="server"></asp:TextBox>
+                              <asp:TextBox type="text" CssClass="form-control" ID="tb_id" placeholder="Transaction ID" runat="server"></asp:TextBox>
                             </div>
                           </div>
                           <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label hor-form">Name</label>
+                            <label for="inputEmail3" class="col-sm-2 control-label hor-form">Room</label>
                             <div class="col-sm-10">
-                              <asp:TextBox type="text" CssClass="form-control" ID="tb_name" placeholder="Name of Customer" runat="server"></asp:TextBox>
+                              <asp:DropDownList ID="cb_room" runat="server" >
+                              </asp:DropDownList>
+                            </div>
+                          </div>
+                           <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label hor-form">Customer</label>
+                            <div class="col-sm-10">
+                                <asp:TextBox ID="tb_customer" runat="server"></asp:TextBox>
                             </div>
                           </div>
                         <hr />
@@ -259,4 +266,3 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </script>
 </body>
 </html>
-

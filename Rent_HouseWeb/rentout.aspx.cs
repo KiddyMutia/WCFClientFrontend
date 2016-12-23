@@ -4,15 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
-using System.Configuration;
 
 namespace Rent_HouseWeb
 {
-    public partial class updateroom : System.Web.UI.Page
+    public partial class rentout : System.Web.UI.Page
     {
-
         string connStr = ConfigurationManager.ConnectionStrings["myCon"].ConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -25,11 +24,14 @@ namespace Rent_HouseWeb
             {
                 if (!IsPostBack)
                 {
-                    isiDropDownList();
                     string id = this.Request["id"];
                     MethodGetId(id);
                     lbl_name.Text = Session["User"].ToString() + "";
                     tb_id.Enabled = false;
+                    tb_customer.Enabled = false;
+                    tb_room.Enabled = false;
+                    tb_roomid.Visible = false;
+                    tb_customerid.Visible = false;
                 }
             }
 
@@ -37,7 +39,8 @@ namespace Rent_HouseWeb
 
         protected void MethodGetId(string id)
         {
-            string strSQL = "SELECT * FROM room WHERE id_room = @id";
+            string strSQL = "select A.id_transaction,A.id_room,A.id_customer,A.datein,A.dateout,A.status,B.name as namaroom,C.nama as namacustomer from transactionn A, room B, customer C where A.id_transaction=@id AND A.id_room = B.id_room AND A.id_customer = C.id_customer order by A.id_transaction";
+
             try
             {
                 SqlConnection conn = new SqlConnection(connStr);
@@ -46,11 +49,11 @@ namespace Rent_HouseWeb
                 conn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 dr.Read();
-                tb_id.Text = dr["id_room"].ToString();
-                tb_name.Text = dr["name"].ToString();
-                cb_roomtype.SelectedValue = dr["id_room_type"].ToString();
-                tb_price.Text = dr["price"].ToString();
-                cb_status.Text = dr["status"].ToString();
+                tb_id.Text = dr["id_transaction"].ToString();
+                tb_room.Text = dr["namaroom"].ToString();
+                tb_customer.Text = dr["namacustomer"].ToString();
+                tb_roomid.Text = dr["id_room"].ToString();
+                tb_customerid.Text = dr["id_customer"].ToString();
 
                 conn.Close();
                 //Label_Status.Text = String.Empty;
@@ -58,7 +61,7 @@ namespace Rent_HouseWeb
             catch (Exception ex)
             {
                 //Label_Status.Text = ex.Message;
-                tb_name.Text = "ERROR!";
+                tb_id.Text = ex.Message;
             }
         }
 
@@ -68,27 +71,26 @@ namespace Rent_HouseWeb
             {
                 SqlConnection sqlconn = new SqlConnection(connStr);
                 string id = this.Request["id"];
-                SqlCommand sqlinsert = new SqlCommand("update room set name=@name,id_room_type=@id_room_type,price=@price,status=@status WHERE id_room=@id", sqlconn);
+                SqlCommand sqlinsert = new SqlCommand("update transactionn set id_room=@id_room,id_customer=@id_customer,dateout=@dateout,status=@status WHERE id_transaction=@id", sqlconn);
 
                 sqlconn.Open();
 
                 sqlinsert.Parameters.Add(new SqlParameter("@id", SqlDbType.VarChar, 4));
-                sqlinsert.Parameters.Add(new SqlParameter("@name", SqlDbType.VarChar, 100));
-                sqlinsert.Parameters.Add(new SqlParameter("@price", SqlDbType.Money));
-                sqlinsert.Parameters.Add(new SqlParameter("@id_room_type", SqlDbType.VarChar, 4));
+                sqlinsert.Parameters.Add(new SqlParameter("@id_room", SqlDbType.VarChar, 4));
+                sqlinsert.Parameters.Add(new SqlParameter("@id_customer", SqlDbType.VarChar, 4));
                 sqlinsert.Parameters.Add(new SqlParameter("@status", SqlDbType.VarChar, 100));
+                sqlinsert.Parameters.Add(new SqlParameter("@dateout", SqlDbType.DateTime));
 
-
-                sqlinsert.Parameters["@name"].Value = tb_name.Text;
-                sqlinsert.Parameters["@price"].Value = tb_price.Text;
-                sqlinsert.Parameters["@id_room_type"].Value = cb_roomtype.SelectedValue;
-                sqlinsert.Parameters["@status"].Value = cb_status.SelectedValue;
+                sqlinsert.Parameters["@id_room"].Value = tb_roomid.Text;
+                sqlinsert.Parameters["@id_customer"].Value = tb_customerid.Text;
+                sqlinsert.Parameters["@status"].Value = "Not Available";
                 sqlinsert.Parameters["@id"].Value = id;
+                sqlinsert.Parameters["@dateout"].Value = DateTime.Now;
 
                 sqlinsert.ExecuteNonQuery();
                 sqlconn.Close();
                 Response.Write("<script>alert('Sukses')</script>");
-                Response.Redirect("roomlist.aspx");
+                Response.Redirect("transactionlist.aspx");
                 //clearData();
                 //TextBox1.Text = generateID();
                 //DisplayRecord();
@@ -98,39 +100,14 @@ namespace Rent_HouseWeb
             {
                 string msg = "Insert Error";
                 msg += ex.Message;
+                tb_id.Text = ex.Message;
                 this.Page.ClientScript.RegisterStartupScript(this.GetType(), "ex", "alert('" + ex.Message + "');", true);
 
             }
 
         }
 
-        protected void isiDropDownList()
-        {
-            //cb_roomtype.Items.Add(new ListItem("--Select Category--", ""));
-            cb_roomtype.AppendDataBoundItems = true;
 
-            SqlConnection con = new SqlConnection(connStr);
-            SqlCommand cmd = new SqlCommand("select id_room_type,name from room_type", con);
-
-            try
-            {
-                con.Open();
-                cb_roomtype.DataSource = cmd.ExecuteReader();
-                cb_roomtype.DataTextField = "name";
-                cb_roomtype.DataValueField = "id_room_type";
-                cb_roomtype.DataBind();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                con.Close();
-                con.Dispose();
-            }
-        }
-
-
+       
     }
 }

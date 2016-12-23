@@ -26,6 +26,7 @@ namespace Rent_HouseWeb
                 {
                     isiDropDownList();
                     tb_id.Text = generateID();
+                    tb_id.Enabled = false;
                 }
 
             }

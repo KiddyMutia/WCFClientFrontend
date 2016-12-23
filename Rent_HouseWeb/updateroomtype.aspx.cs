@@ -27,6 +27,7 @@ namespace Rent_HouseWeb
                     string id = this.Request["id"];
                     MethodGetId(id);
                     lbl_name.Text = Session["User"].ToString() + "";
+                    tb_id.Enabled = false;
                 }
             }
 

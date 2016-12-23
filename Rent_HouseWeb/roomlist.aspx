@@ -173,8 +173,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Transaction</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li><a href="rentin.aspx" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Rent In</a></li>
-							<li><a href="rentout.aspx" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Rent Out</a></li>
-                            <li><a href="moveroom.aspx" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Move Room</a></li>
 							<li><a href="transactionlist.aspx" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Transaction List</a></li>
 					   </ul>
                     </li>

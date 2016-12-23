@@ -25,6 +25,7 @@ namespace Rent_HouseWeb
                 if (!IsPostBack)
                 {
                     isiDropDownList();
+                    customerisiDropDownList();
                     tb_id.Text = generateID();
                 }
 
@@ -36,29 +37,26 @@ namespace Rent_HouseWeb
             try
             {
                 SqlConnection sqlconn = new SqlConnection(connStr);
-                SqlCommand sqlinsert = new SqlCommand("insert into transactionn (id_transaction,id_room,id_customer,datein,dateout,status) values(@id_transaction,@id_room,@id_customer,@datein,@dateout,@status)", sqlconn);
+                SqlCommand sqlinsert = new SqlCommand("insert into transactionn (id_transaction,id_room,id_customer,datein,status) values(@id_transaction,@id_room,@id_customer,@datein,@status)", sqlconn);
 
                 sqlconn.Open();
 
                 sqlinsert.Parameters.Add(new SqlParameter("@id_transaction", SqlDbType.VarChar, 4));
                 sqlinsert.Parameters.Add(new SqlParameter("@id_room", SqlDbType.VarChar, 4));
                 sqlinsert.Parameters.Add(new SqlParameter("@id_customer", SqlDbType.VarChar, 4));
-                sqlinsert.Parameters.Add(new SqlParameter("@name", SqlDbType.VarChar, 100));
-                sqlinsert.Parameters.Add(new SqlParameter("@price", SqlDbType.Money));
-                sqlinsert.Parameters.Add(new SqlParameter("@id_room_type", SqlDbType.VarChar, 4));
+                sqlinsert.Parameters.Add(new SqlParameter("@datein", SqlDbType.DateTime));
                 sqlinsert.Parameters.Add(new SqlParameter("@status", SqlDbType.VarChar, 100));
 
-
-                sqlinsert.Parameters["@id_room"].Value = tb_id.Text;
-                //sqlinsert.Parameters["@name"].Value = tb_name.Text;
-                //sqlinsert.Parameters["@price"].Value = tb_price.Text;
-                //sqlinsert.Parameters["@id_room_type"].Value = cb_roomtype.SelectedValue;
-                sqlinsert.Parameters["@status"].Value = "Available";
+                sqlinsert.Parameters["@id_transaction"].Value = tb_id.Text;
+                sqlinsert.Parameters["@id_room"].Value = cb_room.SelectedValue;
+                sqlinsert.Parameters["@id_customer"].Value = cb_customer.SelectedValue;
+                sqlinsert.Parameters["@datein"].Value = tb_datein.Text;
+                sqlinsert.Parameters["@status"].Value = "Rent In";
 
                 sqlinsert.ExecuteNonQuery();
                 sqlconn.Close();
                 Response.Write("<script>alert('Sukses')</script>");
-                Response.Redirect("roomlist.aspx");
+                Response.Redirect("transactionlist.aspx");
                 //clearData();
                 //TextBox1.Text = generateID();
                 //DisplayRecord();
@@ -79,20 +77,25 @@ namespace Rent_HouseWeb
 
         }
 
+        protected void cl_dateinSelectionChanged(object sender, EventArgs e)
+        {
+            tb_datein.Text = cl_datein.SelectedDate.ToShortDateString();
+        }
+
         protected void isiDropDownList()
         {
             //cb_roomtype.Items.Add(new ListItem("--Select Category--", ""));
             cb_room.AppendDataBoundItems = true;
 
             SqlConnection con = new SqlConnection(connStr);
-            SqlCommand cmd = new SqlCommand("select id_room,name from room", con);
+            SqlCommand cmd = new SqlCommand("select id_room,name from room where status='Available' order by name", con);
 
             try
             {
                 con.Open();
                 cb_room.DataSource = cmd.ExecuteReader();
                 cb_room.DataTextField = "name";
-                cb_room.DataValueField = "id_room_type";
+                cb_room.DataValueField = "id_room";
                 cb_room.DataBind();
             }
             catch (Exception ex)
@@ -112,7 +115,7 @@ namespace Rent_HouseWeb
             cb_customer.AppendDataBoundItems = true;
 
             SqlConnection con = new SqlConnection(connStr);
-            SqlCommand cmd = new SqlCommand("select id_customer,nama from customer", con);
+            SqlCommand cmd = new SqlCommand("select id_customer,nama from customer order by nama", con);
 
             try
             {
@@ -141,30 +144,30 @@ namespace Rent_HouseWeb
             sqlconn.Open();
             DataTable dt = new DataTable();
             SqlDataReader myReader = null;
-            SqlCommand myCommand = new SqlCommand("select TOP 1 id_room from room order by id_room DESC", sqlconn);
+            SqlCommand myCommand = new SqlCommand("select TOP 1 id_transaction from transactionn order by id_transaction DESC", sqlconn);
             myReader = myCommand.ExecuteReader();
 
             if (myReader.Read())
             {
-                sID = (myReader["id_room"].ToString());
+                sID = (myReader["id_transaction"].ToString());
                 ID = Convert.ToInt32(sID.Substring(1, 3));
                 ID += 1;
                 if (ID <= 9)
                 {
-                    sID = "R00" + ID;
+                    sID = "T00" + ID;
                 }
                 else if (ID <= 90)
                 {
-                    sID = "R0" + ID;
+                    sID = "T0" + ID;
                 }
                 else if (ID <= 900)
                 {
-                    sID = "R" + ID;
+                    sID = "T" + ID;
                 }
             }
             else
             {
-                sID = "R001";
+                sID = "T001";
             }
             sqlconn.Close();
             return sID;

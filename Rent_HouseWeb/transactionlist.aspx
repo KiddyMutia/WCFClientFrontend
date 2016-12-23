@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="addroomtype.aspx.cs" Inherits="Rent_HouseWeb.addroomtype" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="transactionlist.aspx.cs" Inherits="Rent_HouseWeb.transactionlist" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html>
 <head>
-<title>Rent House Admin Panel | Add Room Type</title>
+<title>Rent House Admin Panel | Room Type List</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -14,19 +14,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Custom Theme files -->
 <link href="assets/backend/css/style.css" rel='stylesheet' type='text/css' />
 <link href="assets/backend/css/font-awesome.css" rel="stylesheet"> 
+
+<link rel="stylesheet" type="text/css" href="assets/backend/css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="assets/backend/css/dataTables.bootstrap.css">
 <script src="assets/backend/js/jquery.min.js"> </script>
+
+
+
 <!-- Mainly scripts -->
+
 <script src="assets/backend/js/jquery.metisMenu.js"></script>
+
 <script src="assets/backend/js/jquery.slimscroll.min.js"></script>
+
 <!-- Custom and plugin javascript -->
 <link href="assets/backend/css/custom.css" rel="stylesheet">
 <script src="assets/backend/js/custom.js"></script>
 <script src="assets/backend/js/screenfull.js"></script>
+
 <!--data tables-->
-        <link rel="stylesheet" type="text/css" href="assets/backend/css/jquery.dataTables.css">
-        <link rel="stylesheet" type="text/css" href="assets/backend/css/dataTables.bootstrap.css">
-        <script type="text/javascript" src="assets/backend/js/jquery.js"></script>
-        <script type="text/javascript" src="assets/backend/js/jquery.dataTables.js"></script>
+        
 		<script>
 		    $(function () {
 		        $('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
@@ -48,8 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!----->
 
-<!--pie-chart--->
-<script src="assets/backend/js/pie-chart.js" type="text/javascript"></script>
+<!--pie-chart-->
  <script type="text/javascript">
 
      $(document).ready(function () {
@@ -87,9 +93,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
      });
 
     </script>
+    
 <!--skycons-icons-->
 <script src="assets/backend/js/skycons.js"></script>
 <!--//skycons-icons-->
+
+<script type="text/javascript" src="assets/backend/js/jquery.js"></script>
+<script type="text/javascript" src="assets/backend/js/jquery.dataTables.js"></script>  
+
 </head>
 <body>
 <div id="wrapper">
@@ -132,7 +143,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  
 		    <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
-               <ul class="nav" id="side-menu">
+                <ul class="nav" id="side-menu">
 				
                     <li>
                         <a href="adminhome.aspx" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboards</span> </a>
@@ -186,9 +197,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		    <div class="banner">
 		   
 				<h2>
-				<a href="adminhome.aspx">Home</a>
+				<a href="#">Transaction</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Add Room Type</span>
+				<span>Transaction List</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -197,34 +208,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			
 			<div class="col-md-12 ">
+				<div class="content-top-1">
 				
+					<div class="table-responsive">
+                        <asp:PlaceHolder ID="PlaceHolder_Data" runat="server"></asp:PlaceHolder>
+                    </div>
 				
-					<div class="grid-form1">
-                        <h3 id="forms-horizontal">Add Room Type Form</h3>
-                        <form id="Form1" class="form-horizontal" runat="server">
-                          <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label hor-form">ID Room Type</label>
-                            <div class="col-sm-10">
-                              <asp:TextBox type="text" CssClass="form-control" ID="tb_id" placeholder="Name of Customer" runat="server"></asp:TextBox>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label hor-form">Name</label>
-                            <div class="col-sm-10">
-                              <asp:TextBox type="text" CssClass="form-control" ID="tb_name" placeholder="Name of Customer" runat="server"></asp:TextBox>
-                            </div>
-                          </div>
-                        <hr />
-                          <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                              <asp:Button ID="Button1" CssClass="btn btn-default" Text="Save" OnClick="btn_saveClick" runat="server" />
-                            </div>
-                          </div>
-                        </form>
-                     </div>
 				</div>
 				<div class="clearfix"> </div>
-			
+			</div>
 			
 		<div class="clearfix"> </div>
 		</div>
@@ -239,7 +231,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	 
 		<!---->
-<div class="copy">
+        <div class="copy">
             <p> &copy; 2016 Mutia And Hudya. All Rights Reserved</p>
 	    </div>
 		</div>
@@ -247,16 +239,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
        </div>
      </div>
 <!---->
+
 <!--scrolling js-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.data').DataTable();
+    });
+        </script>
+        
+        
 	<script src="assets/backend/js/jquery.nicescroll.js"></script>
 	<script src="assets/backend/js/scripts.js"></script>
 	<!--//scrolling js-->
 	<script src="assets/backend/js/bootstrap.min.js"> </script>
-     <script type="text/javascript">
-         $(document).ready(function () {
-             $('.data').DataTable();
-         });
-        </script>
+     
+        
 </body>
 </html>
 
