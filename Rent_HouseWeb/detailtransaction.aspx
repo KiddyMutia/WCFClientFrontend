@@ -204,21 +204,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <form id="Form1" class="form-horizontal" runat="server">
                           <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label hor-form">ID Transaction</label>
-                            <div class="col-sm-10">
-                              <asp:TextBox type="text" CssClass="form-control" ID="tb_id" placeholder="Transaction ID" runat="server"></asp:TextBox>
+                            <div class="col-sm-6">
+                            <asp:Label type="text" ID="tb_id" placeholder="Transaction ID" runat="server"></asp:Label>
                             </div>
                           </div>
                           <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label hor-form">Room</label>
                             <div class="col-sm-10">
-                              <asp:DropDownList ID="cb_room" runat="server" >
-                              </asp:DropDownList>
+                              <asp:Label type="text" ID="tb_room" placeholder="Transaction ID" runat="server"></asp:Label>
                             </div>
                           </div>
                            <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label hor-form">Customer</label>
                             <div class="col-sm-10">
-                                <asp:TextBox ID="tb_customer" runat="server"></asp:TextBox>
+                                <asp:Label type="text" ID="tb_customer" placeholder="Transaction ID" runat="server"></asp:Label>
                             </div>
                           </div>
                         <hr />

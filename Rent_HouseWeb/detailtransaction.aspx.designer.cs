@@ -37,16 +37,16 @@ namespace Rent_HouseWeb {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_id;
+        protected global::System.Web.UI.WebControls.Label tb_id;
         
         /// <summary>
-        /// cb_room control.
+        /// tb_room control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cb_room;
+        protected global::System.Web.UI.WebControls.Label tb_room;
         
         /// <summary>
         /// tb_customer control.
@@ -55,7 +55,7 @@ namespace Rent_HouseWeb {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_customer;
+        protected global::System.Web.UI.WebControls.Label tb_customer;
         
         /// <summary>
         /// PlaceHolder_Data control.

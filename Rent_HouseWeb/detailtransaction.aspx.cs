@@ -27,10 +27,11 @@ namespace Rent_HouseWeb
                 {
                     string id = this.Request["id"];
                     MethodGetId(id);
+                    GetDataOrganisasi(id);
                     lbl_name.Text = Session["User"].ToString() + "";
                     tb_id.Enabled = false;
                     tb_customer.Enabled = false;
-                    GetDataOrganisasi();
+                    
                 }
             }
 
@@ -49,7 +50,7 @@ namespace Rent_HouseWeb
                 SqlDataReader dr = cmd.ExecuteReader();
                 dr.Read();
                 tb_id.Text = dr["id_transaction"].ToString();
-                cb_room.Text = dr["namaroom"].ToString();
+                tb_room.Text = dr["namaroom"].ToString();
                 tb_customer.Text = dr["namacustomer"].ToString();
 
                 conn.Close();
@@ -62,15 +63,16 @@ namespace Rent_HouseWeb
             }
         }
 
-        protected void GetDataOrganisasi()
+        protected void GetDataOrganisasi(string id)
         {
-            string strSQL = "select A.id_transaction,A.id_room,A.id_customer,A.datein,A.dateout,A.status,B.name as namaroom,C.nama as namacustomer from transactionn A, room B, customer C where A.id_room = B.id_room AND A.id_customer = C.id_customer order by A.status,A.id_transaction ASC";
+            string strSQL = "select A.id_monthlypaid,A.id_transaction,A.date_time,A.total,A.info,C.nama as namacustomer,D.name as namaroom from monthlypaid A,transactionn B,customer C,room D where A.id_transaction = @id AND A.id_transaction = B.id_transaction AND B.id_customer = C.id_customer AND B.id_room = D.id_room order by A.id_monthlypaid";
             SqlConnection conn = new SqlConnection(connStr);
             SqlCommand cmd = new SqlCommand(strSQL, conn);
+            cmd.Parameters.Add("@id", SqlDbType.VarChar, 4).Value = id;
             conn.Open();
             SqlDataReader dr = cmd.ExecuteReader();
             PlaceHolder_Data.Controls.Add(new LiteralControl("<table class='table table-bordered data' id='data'>"));
-            PlaceHolder_Data.Controls.Add(new LiteralControl("<thead>  <tr>  <th>ID Transaction</th>  <th>Room</th> <th>Customer Name</th> <th>Date In</th> <th>Date Out</th> <th>Status</th> <th>Option</th>  </tr>  </thead>  <tbody>"));
+            PlaceHolder_Data.Controls.Add(new LiteralControl("<thead>  <tr>  <th>ID Transaction</th>  <th>Room</th> <th>Customer Name</th> <th>Date Time</th> <th>Price</th> <th>Info</th> </tr>  </thead>  <tbody>"));
             while (dr.Read())
             {
                 PlaceHolder_Data.Controls.Add(new LiteralControl("<tr>"));
@@ -84,17 +86,15 @@ namespace Rent_HouseWeb
                 PlaceHolder_Data.Controls.Add(new LiteralControl(dr["namacustomer"].ToString()));
                 PlaceHolder_Data.Controls.Add(new LiteralControl("</td>"));
                 PlaceHolder_Data.Controls.Add(new LiteralControl("<td>"));
-                PlaceHolder_Data.Controls.Add(new LiteralControl(dr["datein"].ToString()));
+                PlaceHolder_Data.Controls.Add(new LiteralControl(dr["date_time"].ToString()));
                 PlaceHolder_Data.Controls.Add(new LiteralControl("</td>"));
                 PlaceHolder_Data.Controls.Add(new LiteralControl("<td>"));
-                PlaceHolder_Data.Controls.Add(new LiteralControl(dr["dateout"].ToString()));
+                PlaceHolder_Data.Controls.Add(new LiteralControl(dr["total"].ToString()));
                 PlaceHolder_Data.Controls.Add(new LiteralControl("</td>"));
                 PlaceHolder_Data.Controls.Add(new LiteralControl("<td>"));
-                PlaceHolder_Data.Controls.Add(new LiteralControl(dr["status"].ToString()));
+                PlaceHolder_Data.Controls.Add(new LiteralControl(dr["info"].ToString()));
                 PlaceHolder_Data.Controls.Add(new LiteralControl("</td>"));
-                PlaceHolder_Data.Controls.Add(new LiteralControl("<td>"));
-                PlaceHolder_Data.Controls.Add(new LiteralControl("<a class='btn btn-sm btn-default' href=detailtransaction.aspx?id=" + dr["id_transaction"].ToString() + "><i class='fa fa-home'> Detail Transaction</i></a>"));
-                PlaceHolder_Data.Controls.Add(new LiteralControl("</td>"));
+
 
                 /*
                  * PlaceHolder_Data.Controls.Add(new LiteralControl("<td>"));
