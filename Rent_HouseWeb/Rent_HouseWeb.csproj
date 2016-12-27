@@ -61,11 +61,14 @@
     <Content Include="addroomtype.aspx" />
     <Content Include="adminhome.aspx" />
     <Content Include="customerlist.aspx" />
+    <Content Include="detailtransaction.aspx" />
+    <Content Include="index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="monthlypaidlist.aspx" />
     <Content Include="monthlytransaction.aspx" />
     <Content Include="rentin.aspx" />
     <Content Include="rentout.aspx" />
+    <Content Include="rentoutlist.aspx" />
     <Content Include="roomlist.aspx" />
     <Content Include="roomtypelist.aspx" />
     <Content Include="Styles\Site.css" />
@@ -79,7 +82,9 @@
     <Content Include="updateroom.aspx" />
     <Content Include="updateroomtype.aspx" />
     <Content Include="updatetransaction.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -172,8 +177,22 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="detailtransaction.aspx.cs">
+      <DependentUpon>detailtransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detailtransaction.aspx.designer.cs">
+      <DependentUpon>detailtransaction.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -210,6 +229,13 @@
     </Compile>
     <Compile Include="rentout.aspx.designer.cs">
       <DependentUpon>rentout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rentoutlist.aspx.cs">
+      <DependentUpon>rentoutlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rentoutlist.aspx.designer.cs">
+      <DependentUpon>rentoutlist.aspx</DependentUpon>
     </Compile>
     <Compile Include="roomlist.aspx.cs">
       <DependentUpon>roomlist.aspx</DependentUpon>
@@ -283,7 +309,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>2305</DevelopmentServerPort>
+          <DevelopmentServerPort>1966</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

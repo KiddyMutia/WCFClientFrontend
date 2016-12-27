@@ -67,16 +67,14 @@ namespace Rent_HouseWeb
             {
                 SqlConnection sqlconn = new SqlConnection(connStr);
                 string id = this.Request["id"];
-                SqlCommand sqlinsert = new SqlCommand("update transactionn set id_room=@id_room,id_customer=@id_customer WHERE id_transaction=@id", sqlconn);
+                SqlCommand sqlinsert = new SqlCommand("update transactionn set id_room=@id_room WHERE id_transaction=@id", sqlconn);
 
                 sqlconn.Open();
 
                 sqlinsert.Parameters.Add(new SqlParameter("@id", SqlDbType.VarChar, 4));
                 sqlinsert.Parameters.Add(new SqlParameter("@id_room", SqlDbType.VarChar, 4));
-                sqlinsert.Parameters.Add(new SqlParameter("@id_customer", SqlDbType.VarChar, 4));
 
                 sqlinsert.Parameters["@id_room"].Value = cb_room.SelectedValue;
-                sqlinsert.Parameters["@id_customer"].Value = tb_customer.Text;
                 sqlinsert.Parameters["@id"].Value = id;
 
                 sqlinsert.ExecuteNonQuery();
@@ -92,6 +90,7 @@ namespace Rent_HouseWeb
             {
                 string msg = "Insert Error";
                 msg += ex.Message;
+                tb_id.Text = ex.Message;
                 this.Page.ClientScript.RegisterStartupScript(this.GetType(), "ex", "alert('" + ex.Message + "');", true);
 
             }

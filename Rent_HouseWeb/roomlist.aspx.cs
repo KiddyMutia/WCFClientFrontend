@@ -26,8 +26,11 @@ namespace Rent_HouseWeb
             }
             else // if it will find Session it will write message on WelcomeLabel.
             {
-                lbl_name.Text = Session["User"].ToString() + "";
-                GetDataOrganisasi();
+                if (!IsPostBack)
+                {
+                    lbl_name.Text = Session["User"].ToString() + "";
+                    GetDataOrganisasi();
+                }
             }
 
         }

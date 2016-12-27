@@ -34,7 +34,7 @@ namespace Rent_HouseWeb
 
         protected void GetDataOrganisasi()
         {
-            string strSQL = "select A.id_transaction,A.id_room,A.id_customer,A.datein,A.dateout,A.status,B.name as namaroom,C.nama as namacustomer,B.price from transactionn A, room B, customer C where A.id_room = B.id_room AND A.id_customer = C.id_customer AND A.status = 'Available' order by A.id_transaction";
+            string strSQL = "select A.id_transaction,A.id_room,A.id_customer,A.datein,A.dateout,A.status,B.name as namaroom,C.nama as namacustomer,B.price from transactionn A, room B, customer C where A.status = 'Rent In' AND A.id_room = B.id_room AND A.id_customer = C.id_customer order by A.id_transaction";
             SqlConnection conn = new SqlConnection(connStr);
             SqlCommand cmd = new SqlCommand(strSQL, conn);
             conn.Open();

@@ -34,7 +34,7 @@ namespace Rent_HouseWeb
 
         protected void GetDataOrganisasi()
         {
-            string strSQL = "select A.id_transaction,A.id_room,A.id_customer,A.datein,A.dateout,A.status,B.name as namaroom,C.nama as namacustomer from transactionn A, room B, customer C where A.id_room = B.id_room AND A.id_customer = C.id_customer order by A.id_transaction";
+            string strSQL = "select A.id_transaction,A.id_room,A.id_customer,A.datein,A.dateout,A.status,B.name as namaroom,C.nama as namacustomer from transactionn A, room B, customer C where A.id_room = B.id_room AND A.id_customer = C.id_customer order by A.status,A.id_transaction ASC";
             SqlConnection conn = new SqlConnection(connStr);
             SqlCommand cmd = new SqlCommand(strSQL, conn);
             conn.Open();
@@ -63,8 +63,14 @@ namespace Rent_HouseWeb
                 PlaceHolder_Data.Controls.Add(new LiteralControl(dr["status"].ToString()));
                 PlaceHolder_Data.Controls.Add(new LiteralControl("</td>"));
                 PlaceHolder_Data.Controls.Add(new LiteralControl("<td>"));
-                PlaceHolder_Data.Controls.Add(new LiteralControl("<a class='btn btn-sm btn-default' href=updatetransaction.aspx?id=" + dr["id_transaction"].ToString() + "><i class='fa fa-home'> Move Room</i></a> <a class='btn btn-sm btn-default' href=rentout.aspx?id=" + dr["id_transaction"].ToString() + "><i class='fa fa-check'> Rent Out</i></a>"));
+                PlaceHolder_Data.Controls.Add(new LiteralControl("<a class='btn btn-sm btn-default' href=detailtransaction.aspx?id=" + dr["id_transaction"].ToString() + "><i class='fa fa-home'> Detail Transaction</i></a>"));
                 PlaceHolder_Data.Controls.Add(new LiteralControl("</td>"));
+
+                /*
+                 * PlaceHolder_Data.Controls.Add(new LiteralControl("<td>"));
+                    PlaceHolder_Data.Controls.Add(new LiteralControl("<a class='btn btn-sm btn-default' href=updatetransaction.aspx?id=" + dr["id_transaction"].ToString() + "><i class='fa fa-home'> Move Room</i></a> <a class='btn btn-sm btn-default' href=rentout.aspx?id=" + dr["id_transaction"].ToString() + "><i class='fa fa-check'> Rent Out</i></a>"));
+                    PlaceHolder_Data.Controls.Add(new LiteralControl("</td>"));
+                 * */
                 PlaceHolder_Data.Controls.Add(new LiteralControl("</tr>"));
             }
             PlaceHolder_Data.Controls.Add(new LiteralControl("</tbody></table>"));

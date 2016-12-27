@@ -83,7 +83,7 @@ namespace Rent_HouseWeb
 
                 sqlinsert.Parameters["@id_room"].Value = tb_roomid.Text;
                 sqlinsert.Parameters["@id_customer"].Value = tb_customerid.Text;
-                sqlinsert.Parameters["@status"].Value = "Not Available";
+                sqlinsert.Parameters["@status"].Value = "Rent Out";
                 sqlinsert.Parameters["@id"].Value = id;
                 sqlinsert.Parameters["@dateout"].Value = DateTime.Now;
 

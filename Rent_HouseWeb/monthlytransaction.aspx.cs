@@ -24,6 +24,8 @@ namespace Rent_HouseWeb
             {
                 if (!IsPostBack)
                 {
+
+
                     tb_id.Text = generateID();
                     string id = this.Request["id"];
                     MethodGetId(id);
@@ -42,31 +44,53 @@ namespace Rent_HouseWeb
 
         protected void MethodGetId(string id)
         {
-            string strSQL = "select A.id_transaction,A.id_room,A.id_customer,A.datein,A.dateout,A.status,B.price,B.name as namaroom,C.nama as namacustomer from transactionn A, room B, customer C where A.id_transaction=@id AND A.id_room = B.id_room AND A.id_customer = C.id_customer order by A.id_transaction";
-
-            try
+            string strSQL = "select A.id_transaction,A.id_room,A.id_customer,DATEPART(mm,A.datein) as bulan, DATEPART(yy,A.datein) as tahun,A.dateout,A.status,B.price,B.name as namaroom,C.nama as namacustomer from transactionn A, room B, customer C where  A.id_transaction=@id AND A.id_room = B.id_room AND A.id_customer = C.id_customer order by A.id_transaction";
+            string strSQL2 = "select A.id_transaction,DATEPART(mm,A.date_time) as bulan, DATEPART(yy,A.date_time) as tahun from monthlypaid A, transactionn B where  A.id_transaction='T001' AND A.id_transaction = B.id_transaction";
+            SqlConnection conn2 = new SqlConnection(connStr);
+            SqlCommand cmd2 = new SqlCommand(strSQL2, conn2);
+            cmd2.Parameters.Add("@id", SqlDbType.VarChar, 4).Value = id;
+            conn2.Open();
+            SqlDataReader dr2 = cmd2.ExecuteReader();
+            if (dr2.Read())
             {
-                SqlConnection conn = new SqlConnection(connStr);
-                SqlCommand cmd = new SqlCommand(strSQL, conn);
-                cmd.Parameters.Add("@id", SqlDbType.VarChar, 4).Value = id;
-                conn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                dr.Read();
-                tb_idtrans.Text = dr["id_transaction"].ToString();
-                tb_price.Text = dr["price"].ToString();
-                tb_room.Text = dr["namaroom"].ToString();
-                tb_customer.Text = dr["namacustomer"].ToString();
-                tb_roomid.Text = dr["id_room"].ToString();
-                tb_customerid.Text = dr["id_customer"].ToString();
 
-                conn.Close();
-                //Label_Status.Text = String.Empty;
+                try
+                {
+                    SqlConnection conn = new SqlConnection(connStr);
+                    SqlCommand cmd = new SqlCommand(strSQL, conn);
+                    cmd.Parameters.Add("@id", SqlDbType.VarChar, 4).Value = id;
+                    conn.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        if (dr2["bulan"].ToString() == DateTime.Now.Month.ToString() && dr2["tahun"].ToString() == DateTime.Now.Year.ToString())
+                        {
+                            tb_idtrans.Text = "SUDAH PERNAH BAYAR";
+                            Button1.Enabled = false;
+                        }
+                        else
+                        {
+                            tb_idtrans.Text = dr["id_transaction"].ToString();
+                            tb_price.Text = dr["price"].ToString();
+                            tb_room.Text = dr["namaroom"].ToString();
+                            tb_customer.Text = dr["namacustomer"].ToString();
+                            tb_roomid.Text = dr["id_room"].ToString();
+                            tb_customerid.Text = dr["id_customer"].ToString();
+                            
+                        }
+                    }
+
+
+                    conn.Close();
+                    //Label_Status.Text = String.Empty;
+                }
+                catch (Exception ex)
+                {
+                    //Label_Status.Text = ex.Message;
+                    tb_id.Text = ex.Message;
+                }
             }
-            catch (Exception ex)
-            {
-                //Label_Status.Text = ex.Message;
-                tb_id.Text = ex.Message;
-            }
+            conn2.Close();
         }
 
         protected void btn_saveClick(object sender, EventArgs e)
