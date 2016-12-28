@@ -117,7 +117,7 @@
 			
 				
 				<div class="col-sm-4 wow fadeInDown text-center">
-				  <img  class="rotate" src="img/icon/retina.svg" alt="Generic placeholder image">
+				  <img  class="rotate" src="assets/frontend/img/icon/trusted.png" alt="Generic placeholder image">
 				   <h3>Trusted</h3>
 					<p class="lead">Our Rent House is Trusted by many customer because we have good services, facilities and security </p>
 				  <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
@@ -125,14 +125,14 @@
 			
 			
 				<div class="col-sm-4  wow fadeInDown text-center">
-				  <img class="rotate" src="img/icon/laptop.svg" alt="Generic placeholder image">
+				  <img class="rotate" src="assets/frontend/img/icon/rate.png" alt="Generic placeholder image">
 				  <h3>Facilites</h3>
 				  <p class="lead">We have all the facilities that customer need like 24 hours wifi, clean shared kitchen, and wide parking area</p>
 				 <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
 				</div><!-- /.col-lg-4 -->
 				
 				<div class="col-sm-4 wow fadeInDown text-center">
-				  <img  class="rotate" src="img/icon/map.svg" alt="Generic placeholder image">
+				  <img  class="rotate" src="assets/frontend/img/icon/location.png" alt="Generic placeholder image">
 				   <h3>Strategic Location</h3>
 				   <p class="lead"> Our location near University of Indonesia, Margonda Road, Restaurants and Public Facility </p>
 				   <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
@@ -150,7 +150,7 @@
             <div class="row">
 			
 				<div class="col-sm-6 pull-right wow fadeInRightBig">
-                    <img class="img-responsive " src="img/kost.jpg" alt="">
+                    <img class="img-responsive " src="assets/frontend/img/kost.jpg" alt="">
                 </div>
 				
                 <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
@@ -175,19 +175,19 @@
             <div class="row">
                 <div class="col-sm-6 wow fadeInLeftBig">
                      <div id="owl-demo-1" class="owl-carousel">
-						<a href="img/f1.jpg" class="image-link">
+						<a href="assets/frontend/img/f1.jpg" class="image-link">
 							<div class="item">
-								<img  class="img-responsive img-rounded" src="img/f1.jpg" alt="">
+								<img  class="img-responsive img-rounded" src="assets/frontend/img/f1.jpg" alt="">
 							</div>
 						</a>
-						<a href="img/f2.jpg" class="image-link">
+						<a href="assets/frontend/img/f2.jpg" class="image-link">
 							<div class="item">
-								<img  class="img-responsive img-rounded" src="img/f2.jpg" alt="">
+								<img  class="img-responsive img-rounded" src="assets/frontend/img/f2.jpg" alt="">
 							</div>
 						</a>
-						<a href="img/f3.jpg" class="image-link">
+						<a href="assets/frontend/img/f3.jpg" class="image-link">
 							<div class="item">
-								<img  class="img-responsive img-rounded" src="img/f3.jpg" alt="">
+								<img  class="img-responsive img-rounded" src="assets/frontend/img/f3.jpg" alt="">
 							</div>
 						</a>
 					</div>       
@@ -199,9 +199,6 @@
                     <p class="lead">
 						We have all the facilities that customer need like 24 hours wifi, clean shared kitchen, and wide parking area
 					</p>
-
-					 <p><a class="btn btn-embossed btn-primary" href="#" role="button">View Details</a> 
-					 <a class="btn btn-embossed btn-info" href="#" role="button">Visit Website</a></p>
 				</div>  			
 			</div>
         </div>
@@ -220,39 +217,39 @@
 		    <div class="row wow bounceInUp" >
               <div id="owl-demo" class="owl-carousel">
 				
-				<a href="img/slide/1.png" class="image-link">
+				<a href="assets/frontend/img/slide/1.png" class="image-link">
 					<div class="item">
-						<img  class="img-responsive img-rounded" src="img/slide/1.png" alt="Owl Image">
+						<img  class="img-responsive img-rounded" src="assets/frontend/img/slide/1.png" alt="Owl Image">
 					</div>
 				</a>
 				
-               <a href="img/slide/2.png" class="image-link">
+               <a href="assets/frontend/img/slide/2.png" class="image-link">
 					<div class="item">
-						<img  class="img-responsive img-rounded" src="img/slide/2.png" alt="Owl Image">
+						<img  class="img-responsive img-rounded" src="assets/frontend/img/slide/2.png" alt="Owl Image">
 					</div>
 				</a>
 				
-				<a href="img/slide/3.png" class="image-link">
+				<a href="assets/frontend/img/slide/3.png" class="image-link">
 					<div class="item">
-						<img  class="img-responsive img-rounded" src="img/slide/3.png" alt="Owl Image">
+						<img  class="img-responsive img-rounded" src="assets/frontend/img/slide/3.png" alt="Owl Image">
 					</div>
 				</a>
 				
-				<a href="img/slide/1.png" class="image-link">
+				<a href="assets/frontend/img/slide/1.png" class="image-link">
 					<div class="item">
-						<img  class="img-responsive img-rounded" src="img/slide/1.png" alt="Owl Image">
+						<img  class="img-responsive img-rounded" src="assets/frontend/img/slide/1.png" alt="Owl Image">
 					</div>
 				</a>
 				
-               <a href="img/slide/2.png" class="image-link">
+               <a href="assets/frontend/img/slide/2.png" class="image-link">
 					<div class="item">
-						<img  class="img-responsive img-rounded" src="img/slide/2.png" alt="Owl Image">
+						<img  class="img-responsive img-rounded" src="assets/frontend/img/slide/2.png" alt="Owl Image">
 					</div>
 				</a>
 				
-				<a href="img/slide/3.png" class="image-link">
+				<a href="assets/frontend/img/slide/3.png" class="image-link">
 					<div class="item">
-						<img  class="img-responsive img-rounded" src="img/slide/3.png" alt="Owl Image">
+						<img  class="img-responsive img-rounded" src="assets/frontend/img/slide/3.png" alt="Owl Image">
 					</div>
 				</a>
               </div>       
@@ -270,7 +267,7 @@
 				<p class="lead" style="margin-top:0">This is the table of the available room</p>
 			 </div>
 			 <div class="col-md-12">
-				<div class="table-responsive">
+				    <div class="table-responsive">
                         <asp:PlaceHolder ID="PlaceHolder_Data1" runat="server"></asp:PlaceHolder>
                     </div>
 			 </div>
@@ -307,7 +304,7 @@
 				<p class="lead" style="margin-top:0">Rent House</p>
 			</div>
 			
-			<form role="form" action="" method="post" >
+			<!--<form role="form" action="" method="post" >
 				<div class="col-md-6">
 					<div class="form-group">
 						<label for="InputName">Your Name</label>
@@ -335,7 +332,7 @@
 
 					<input type="submit" name="submit" id="submit" value="Submit" class="btn wow tada btn-embossed btn-primary pull-right">
 				</div>
-			</form>
+			</form>-->
 			
 			<hr class="featurette-divider hidden-lg">
 				<div class="col-md-5 col-md-push-1 address">
@@ -347,13 +344,15 @@
 					Phone: 021-7655123</p>
 					</address>
 
-					<h3>Social</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1528.8165726027642!2d106.81997738963952!3d-6.360436225386488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1482903194143" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+					<!--<h3>Social</h3>
 					<li class="social"> 
 					<a href="#"><i class="fa fa-facebook-square fa-size"> </i></a>
 					<a href="#"><i class="fa  fa-twitter-square fa-size"> </i> </a> 
 					<a href="#"><i class="fa fa-google-plus-square fa-size"> </i></a>
 					<a href="#"><i class="fa fa-flickr fa-size"> </i> </a>
-					</li>
+					</li>-->
 				</div>
 			</div>
 		</div>
@@ -380,12 +379,12 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
-	<script src="js/owl.carousel.js"></script>
-	<script src="js/script.js"></script>
+    <script src="assets/frontend/js/jquery-1.10.2.js"></script>
+    <script src="assets/frontend/js/bootstrap.js"></script>
+	<script src="assets/frontend/js/owl.carousel.js"></script>
+	<script src="assets/frontend/js/script.js"></script>
 	<!-- StikyMenu -->
-	<script src="js/stickUp.min.js"></script>
+	<script src="assets/frontend/js/stickUp.min.js"></script>
 	<script type="text/javascript">
 	    jQuery(function ($) {
 	        $(document).ready(function () {
