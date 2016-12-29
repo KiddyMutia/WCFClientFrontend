@@ -69,7 +69,7 @@
         <!-- /.container -->
 		<div class="col-xs-12 text-center abcen wow fadeIn">
 			<div class="button_down "> 
-				<a class="imgcircle wow bounceInUp" data-wow-duration="1.5s"  href="#whyus"> <img class="img_scroll" src="img/icon/circle.png" alt=""> </a>
+				<a class="imgcircle wow bounceInUp" data-wow-duration="1.5s"  href="#whyus"> <img class="img_scroll" src="assets/frontend/img/icon/circle.png" alt=""> </a>
 			</div>
 		</div>
     </div>
@@ -158,7 +158,7 @@
 					<div class="sub-title lead3">Feel Like Home</div>
                     <p class="lead">
 						Rent House is a rent house that makes the customer feels like home when they stay in rent house. 
-						We have so many facilities that support all of customer's need.
+						We have so many facilities that support all of customer's need. If you want to rent, you can visit us in this address. Please, click this visit button!
 					</p>
 
 					 <p>
@@ -219,37 +219,37 @@
 				
 				<a href="assets/frontend/img/slide/1.png" class="image-link">
 					<div class="item">
-						<img  class="img-responsive img-rounded" src="assets/frontend/img/slide/1.png" alt="Owl Image">
+						<h5>Kamar Mandi Di Dalam, Non Tempat Tidur, AC </h5><img  class="img-responsive img-rounded" src="assets/frontend/img/slide/1.png" alt="Owl Image">
 					</div>
 				</a>
 				
                <a href="assets/frontend/img/slide/2.png" class="image-link">
 					<div class="item">
-						<img  class="img-responsive img-rounded" src="assets/frontend/img/slide/2.png" alt="Owl Image">
+						<h5>Kamar Mandi Di Dalam, Tempat Tidur, AC</h5><img  class="img-responsive img-rounded" src="assets/frontend/img/slide/2.png" alt="Owl Image">
 					</div>
 				</a>
 				
 				<a href="assets/frontend/img/slide/3.png" class="image-link">
 					<div class="item">
-						<img  class="img-responsive img-rounded" src="assets/frontend/img/slide/3.png" alt="Owl Image">
+						<h5>Kamar Mandi Di Luar, Tempat Tidur, AC</h5><img  class="img-responsive img-rounded" src="assets/frontend/img/slide/3.png" alt="Owl Image">
 					</div>
 				</a>
 				
 				<a href="assets/frontend/img/slide/1.png" class="image-link">
 					<div class="item">
-						<img  class="img-responsive img-rounded" src="assets/frontend/img/slide/1.png" alt="Owl Image">
+						<h5>Kamar Mandi Di Dalam, Tempat Tidur, Non AC</h5><img  class="img-responsive img-rounded" src="assets/frontend/img/slide/4.png" alt="Owl Image">
 					</div>
 				</a>
 				
                <a href="assets/frontend/img/slide/2.png" class="image-link">
 					<div class="item">
-						<img  class="img-responsive img-rounded" src="assets/frontend/img/slide/2.png" alt="Owl Image">
+						<h5>Kamar Mandi Di Luar, Non Tempat Tidur, Non AC</h5><img  class="img-responsive img-rounded" src="assets/frontend/img/slide/5.png" alt="Owl Image">
 					</div>
 				</a>
 				
 				<a href="assets/frontend/img/slide/3.png" class="image-link">
 					<div class="item">
-						<img  class="img-responsive img-rounded" src="assets/frontend/img/slide/3.png" alt="Owl Image">
+						<h5>Kamar Mandi Di Luar</h5><img  class="img-responsive img-rounded" src="assets/frontend/img/slide/6.png" alt="Owl Image">
 					</div>
 				</a>
               </div>       

@@ -4,7 +4,7 @@
 
 <html>
 <head>
-<title>Rent House Admin Panel | Room Type List</title>
+<title>Rent House Admin Panel | Rent Out List</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -200,7 +200,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h2>
 				<a href="#">Transaction</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Transaction List</span>
+				<span>Rent Transaction List</span>
 				</h2>
 		    </div>
 		<!--//banner-->

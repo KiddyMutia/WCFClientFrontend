@@ -187,7 +187,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		    <div class="banner">
 		   
 				<h2>
-				<a href="adminhome.aspx">Home</a>
+				<a href="adminhome.aspx">Room</a>
 				<i class="fa fa-angle-right"></i>
 				<span>Add Room </span>
 				</h2>

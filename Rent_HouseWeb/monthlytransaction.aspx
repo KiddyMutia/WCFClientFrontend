@@ -4,7 +4,7 @@
 
 <html>
 <head>
-<title>Rent House Admin Panel | Add Room </title>
+<title>Rent House Admin Panel | Monthly Transaction </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -187,9 +187,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		    <div class="banner">
 		   
 				<h2>
-				<a href="adminhome.aspx">Home</a>
+				<a href="#">Monthly Paid</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Add Room </span>
+				<span>Monthly Transaction</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -201,7 +201,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 				
 					<div class="grid-form1">
-                        <h3 id="forms-horizontal">Rent In Form</h3>
+                        <h3 id="forms-horizontal">Monthly Paid Transaction Form</h3>
                         <form id="Form1" class="form-horizontal" runat="server">
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label hor-form">ID Monthly Transaction</label>

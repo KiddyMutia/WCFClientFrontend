@@ -198,9 +198,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		    <div class="banner">
 		   
 				<h2>
-				<a href="index.html">Home</a>
+				<a href="#">Customer</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Dashboard</span>
+				<span>Customer List</span>
 				</h2>
 		    </div>
 		<!--//banner-->

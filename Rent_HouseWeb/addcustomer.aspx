@@ -202,7 +202,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung
 				
 				
 					<div class="grid-form1">
-                        <h3 id="forms-horizontal">Horizontal form</h3>
+                        <h3 id="forms-horizontal">Add Customer Form</h3>
                         <form class="form-horizontal" runat="server">
                           <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label hor-form">ID Customer</label>

@@ -81,7 +81,6 @@
     <Content Include="updatecustomer.aspx" />
     <Content Include="updateroom.aspx" />
     <Content Include="updateroomtype.aspx" />
-    <Content Include="updatetransaction.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -286,13 +285,6 @@
     <Compile Include="updateroomtype.aspx.designer.cs">
       <DependentUpon>updateroomtype.aspx</DependentUpon>
     </Compile>
-    <Compile Include="updatetransaction.aspx.cs">
-      <DependentUpon>updatetransaction.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="updatetransaction.aspx.designer.cs">
-      <DependentUpon>updatetransaction.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -309,7 +301,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1966</DevelopmentServerPort>
+          <DevelopmentServerPort>23262</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

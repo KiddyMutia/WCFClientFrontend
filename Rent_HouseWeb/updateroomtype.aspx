@@ -4,7 +4,7 @@
 
 <html>
 <head>
-<title>Rent House Admin Panel | Add Room Type</title>
+<title>Rent House Admin Panel | Update Room Type</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -187,7 +187,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		    <div class="banner">
 		   
 				<h2>
-				<a href="adminhome.aspx">Home</a>
+				<a href="#">Room Type</a>
 				<i class="fa fa-angle-right"></i>
 				<span>Update Room Type</span>
 				</h2>
