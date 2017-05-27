@@ -207,13 +207,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung
                           <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label hor-form">ID Customer</label>
                             <div class="col-sm-10">
-                              <asp:TextBox type="text" CssClass="form-control" ID="tb_id" placeholder="Name of Customer" runat="server"></asp:TextBox>
+                              <asp:TextBox type="text" CssClass="form-control" ID="tb_id" placeholder="Name of Customer" runat="server" required=""></asp:TextBox>
                             </div>
                           </div>
                           <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label hor-form">Name</label>
                             <div class="col-sm-10">
-                              <asp:TextBox type="text" CssClass="form-control" ID="tb_name" placeholder="Name of Customer" runat="server"></asp:TextBox>
+                              <asp:TextBox type="text" CssClass="form-control" ID="tb_name" placeholder="Name of Customer" runat="server" required=""></asp:TextBox>
                             </div>
                           </div>
                           <div class="form-group">
@@ -228,19 +228,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung
                           <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label hor-form">Card Number</label>
                             <div class="col-sm-10">
-                              <asp:TextBox type="text" CssClass="form-control" ID="tb_number" placeholder="Number of Card" runat="server"></asp:TextBox>
+                              <asp:TextBox type="text" CssClass="form-control" ID="tb_number" placeholder="Number of Card" runat="server" required=""></asp:TextBox>
                             </div>
                           </div>
                           <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label hor-form">Phone Number</label>
                             <div class="col-sm-10">
-                              <asp:TextBox type="text" CssClass="form-control" ID="tb_phone" placeholder="Phone Number" runat="server"></asp:TextBox>
+                              <asp:TextBox type="text" CssClass="form-control" ID="tb_phone" placeholder="Phone Number" runat="server" required=""></asp:TextBox>
                             </div>
                           </div>
                           <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label hor-form">Address</label>
                             <div class="col-sm-10">
-                              <asp:TextBox type="text" TextMode="MultiLine" CssClass="form-control" ID="tb_address" placeholder="Address" runat="server"></asp:TextBox>
+                              <asp:TextBox type="text" TextMode="MultiLine" CssClass="form-control" ID="tb_address" placeholder="Address" runat="server" required=""></asp:TextBox>
                             </div>
                           </div>
                           <div class="form-group">
@@ -248,7 +248,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung
                             <div class="col-sm-3">
                               <asp:Calendar  ID="cb_date" runat="server" OnSelectionChanged="bd_SelectionChanged" ></asp:Calendar>
                               <br />
-                              <asp:TextBox type="text" CssClass="form-control" ID="tb_date" placeholder="Birthdate" runat="server"></asp:TextBox>
+                              <asp:TextBox type="text" CssClass="form-control" ID="tb_date" placeholder="Birthdate" runat="server" required=""></asp:TextBox>
                               
                             </div>
                           </div>

@@ -206,13 +206,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                           <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label hor-form">ID Room Type</label>
                             <div class="col-sm-10">
-                              <asp:TextBox type="text" CssClass="form-control" ID="tb_id" placeholder="Name of Customer" runat="server"></asp:TextBox>
+                              <asp:TextBox type="text" CssClass="form-control" ID="tb_id" placeholder="Name of Customer" runat="server" required=""></asp:TextBox>
                             </div>
                           </div>
                           <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label hor-form">Name</label>
                             <div class="col-sm-10">
-                              <asp:TextBox type="text" CssClass="form-control" ID="tb_name" placeholder="Name of Room Type" runat="server"></asp:TextBox>
+                              <asp:TextBox type="text" CssClass="form-control" ID="tb_name" placeholder="Name of Room Type" runat="server" required=""></asp:TextBox>
                             </div>
                           </div>
                         <hr />

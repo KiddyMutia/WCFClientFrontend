@@ -17,7 +17,7 @@ namespace Rent_HouseWeb
         {
             if (Session["User"] != null) // if it will not find Session user it will redirect to login page.
             {
-                Response.Redirect("Login.aspx");
+                Response.Redirect("adminhome.aspx");
             }
         }
 

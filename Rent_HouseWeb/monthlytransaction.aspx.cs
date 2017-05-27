@@ -66,6 +66,13 @@ namespace Rent_HouseWeb
                         if (dr2["bulan"].ToString() == DateTime.Now.Month.ToString() && dr2["tahun"].ToString() == DateTime.Now.Year.ToString())
                         {
                             tb_idtrans.Text = "SUDAH PERNAH BAYAR";
+                            tb_id.Enabled = false;
+                            tb_idtrans.Enabled = false;
+                            tb_price.Enabled = false;
+                            tb_customer.Enabled = false;
+                            tb_room.Enabled = false;
+                            tb_roomid.Visible = false;
+                            tb_customerid.Visible = false;
                             Button1.Enabled = false;
                         }
                         else

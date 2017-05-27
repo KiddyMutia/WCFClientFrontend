@@ -3,3 +3,8 @@ c:\users\kiddy\documents\visual studio 2010\Projects\Rent_HouseWeb\Rent_HouseWeb
 c:\users\kiddy\documents\visual studio 2010\Projects\Rent_HouseWeb\Rent_HouseWeb\obj\Debug\Rent_HouseWeb.dll
 c:\users\kiddy\documents\visual studio 2010\Projects\Rent_HouseWeb\Rent_HouseWeb\obj\Debug\Rent_HouseWeb.pdb
 C:\Users\Kiddy\documents\visual studio 2010\Projects\Rent_HouseWeb\Rent_HouseWeb\obj\Debug\Rent_HouseWeb.csprojResolveAssemblyReference.cache
+D:\DFile\Kampus\CCIT\Semester3\PROJECT4\RentHouse_Group8_MutiaAyuDianita_MHudyaRamadhana\Rent_HouseWeb\Rent_HouseWeb\bin\Rent_HouseWeb.dll
+D:\DFile\Kampus\CCIT\Semester3\PROJECT4\RentHouse_Group8_MutiaAyuDianita_MHudyaRamadhana\Rent_HouseWeb\Rent_HouseWeb\bin\Rent_HouseWeb.pdb
+D:\DFile\Kampus\CCIT\Semester3\PROJECT4\RentHouse_Group8_MutiaAyuDianita_MHudyaRamadhana\Rent_HouseWeb\Rent_HouseWeb\obj\Debug\Rent_HouseWeb.csprojResolveAssemblyReference.cache
+D:\DFile\Kampus\CCIT\Semester3\PROJECT4\RentHouse_Group8_MutiaAyuDianita_MHudyaRamadhana\Rent_HouseWeb\Rent_HouseWeb\obj\Debug\Rent_HouseWeb.dll
+D:\DFile\Kampus\CCIT\Semester3\PROJECT4\RentHouse_Group8_MutiaAyuDianita_MHudyaRamadhana\Rent_HouseWeb\Rent_HouseWeb\obj\Debug\Rent_HouseWeb.pdb
