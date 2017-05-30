@@ -58,9 +58,6 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="addcustomer.aspx" />
-    <Content Include="addmonthlypaid.aspx" />
-    <Content Include="addroom.aspx" />
-    <Content Include="addroomtype.aspx" />
     <Content Include="adminhome.aspx" />
     <Content Include="customerlist.aspx" />
     <Content Include="detailtransaction.aspx" />
@@ -68,11 +65,11 @@
     <Content Include="Login.aspx" />
     <Content Include="monthlypaidlist.aspx" />
     <Content Include="monthlytransaction.aspx" />
+    <Content Include="register.aspx" />
     <Content Include="rentin.aspx" />
     <Content Include="rentout.aspx" />
     <Content Include="rentoutlist.aspx" />
     <Content Include="roomlist.aspx" />
-    <Content Include="roomtypelist.aspx" />
     <None Include="Service References\RoomTypeService\Rent_HouseWeb.RoomTypeService.RoomTypeInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -89,10 +86,7 @@
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
-    <Content Include="transactionlist.aspx" />
     <Content Include="updatecustomer.aspx" />
-    <Content Include="updateroom.aspx" />
-    <Content Include="updateroomtype.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -146,27 +140,6 @@
     </Compile>
     <Compile Include="addcustomer.aspx.designer.cs">
       <DependentUpon>addcustomer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="addmonthlypaid.aspx.cs">
-      <DependentUpon>addmonthlypaid.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="addmonthlypaid.aspx.designer.cs">
-      <DependentUpon>addmonthlypaid.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="addroom.aspx.cs">
-      <DependentUpon>addroom.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="addroom.aspx.designer.cs">
-      <DependentUpon>addroom.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="addroomtype.aspx.cs">
-      <DependentUpon>addroomtype.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="addroomtype.aspx.designer.cs">
-      <DependentUpon>addroomtype.aspx</DependentUpon>
     </Compile>
     <Compile Include="adminhome.aspx.cs">
       <DependentUpon>adminhome.aspx</DependentUpon>
@@ -228,6 +201,13 @@
       <DependentUpon>monthlytransaction.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="rentin.aspx.cs">
       <DependentUpon>rentin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -256,13 +236,6 @@
     <Compile Include="roomlist.aspx.designer.cs">
       <DependentUpon>roomlist.aspx</DependentUpon>
     </Compile>
-    <Compile Include="roomtypelist.aspx.cs">
-      <DependentUpon>roomtypelist.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="roomtypelist.aspx.designer.cs">
-      <DependentUpon>roomtypelist.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Service References\RoomTypeService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -275,33 +248,12 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="transactionlist.aspx.cs">
-      <DependentUpon>transactionlist.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="transactionlist.aspx.designer.cs">
-      <DependentUpon>transactionlist.aspx</DependentUpon>
-    </Compile>
     <Compile Include="updatecustomer.aspx.cs">
       <DependentUpon>updatecustomer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="updatecustomer.aspx.designer.cs">
       <DependentUpon>updatecustomer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="updateroom.aspx.cs">
-      <DependentUpon>updateroom.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="updateroom.aspx.designer.cs">
-      <DependentUpon>updateroom.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="updateroomtype.aspx.cs">
-      <DependentUpon>updateroomtype.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="updateroomtype.aspx.designer.cs">
-      <DependentUpon>updateroomtype.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

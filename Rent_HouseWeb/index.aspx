@@ -270,10 +270,10 @@
 				    <div class="table-responsive">
                         <table class='table table-bordered data' id='data'>
                             <thead>
-                            <label>Data Room Type </label>  
+                            <h4 class="text-center wrap_title">Data Room Type </h4>  
                                 <tr>  
                                     <th>Type</th> 
-                                    <th>Price</th> 
+                                    <th>Total</th> 
                                 </tr>  
                             </thead>  
                             <tbody runat="server" id="placeHolder">
@@ -286,6 +286,8 @@
 		  
 		</div>
 	</div>
+
+    
     
 <div id="login" class="content-section-c ">
 		<div class="container">
@@ -293,10 +295,9 @@
 			
 			<div class="col-md-6 col-md-offset-3 text-center">
 				<div class="mockup-content">
-						<div class="morph-button wow pulse morph-button-inflow morph-button-inflow-1">
-							<button type="button ">This is Your Dream Rent House</button>
-							
-						</div>
+                      <a href="#" class="btn-lg btn-info button">Login for reservation</a>
+                      <hr>
+                      <a href="#" class="btn-lg btn-danger button">Don't have account ? Register Here !</a>
 				</div>
 			</div>	
 			</div>

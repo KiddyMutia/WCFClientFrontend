@@ -23,7 +23,7 @@ namespace Rent_HouseWeb
         {
             RoomTypeService.RoomTypeServiceClient obj = new RoomTypeService.RoomTypeServiceClient();
             IList<RoomTypeService.RoomTypeInfo> dataInfo = new List<RoomTypeService.RoomTypeInfo>();
-            dataInfo = obj.getRoomType();
+            dataInfo = obj.getTotalRoomType();
 
             string data = string.Empty;
             string id = string.Empty;
@@ -32,7 +32,7 @@ namespace Rent_HouseWeb
             foreach (var row in dataInfo)
             {
                 id = row.TipeRoomType;
-                jumlah = row.PriceRoomType.ToString();
+                jumlah = row.TotalRoomType.ToString();
                 data += "<tr> <td>" + id + "</td> <td>" + jumlah + "</td> </tr>";
             }
 
