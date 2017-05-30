@@ -21,32 +21,47 @@ namespace Rent_HouseWeb
         }
         protected void GetDataOrganisasi()
         {
-            //string strSQL = "SELECT A.id_room,A.name,A.price,A.status,B.name as nama from room A, room_Type B where A.id_room_type = B.id_room_type AND A.status='Available' ";
-            //SqlConnection conn = new SqlConnection(connStr);
-            //SqlCommand cmd = new SqlCommand(strSQL, conn);
-            //conn.Open();
-            //SqlDataReader dr = cmd.ExecuteReader();
-            //PlaceHolder_Data1.Controls.Add(new LiteralControl("<table class='table table-bordered data' id='data'>"));
-            //PlaceHolder_Data1.Controls.Add(new LiteralControl("<thead>  <tr>  <th>Room Name</th> <th>Room Type</th> <th>Price</th> <th>Status</th> </tr>  </thead>  <tbody>"));
-            //while (dr.Read())
-            //{
-            //    PlaceHolder_Data1.Controls.Add(new LiteralControl("<tr>"));
-            //    PlaceHolder_Data1.Controls.Add(new LiteralControl("<td>"));
-            //    PlaceHolder_Data1.Controls.Add(new LiteralControl(dr["name"].ToString()));
-            //    PlaceHolder_Data1.Controls.Add(new LiteralControl("</td>"));
-            //    PlaceHolder_Data1.Controls.Add(new LiteralControl("<td>"));
-            //    PlaceHolder_Data1.Controls.Add(new LiteralControl(dr["nama"].ToString()));
-            //    PlaceHolder_Data1.Controls.Add(new LiteralControl("</td>"));
-            //    PlaceHolder_Data1.Controls.Add(new LiteralControl("<td>"));
-            //    PlaceHolder_Data1.Controls.Add(new LiteralControl(dr["price"].ToString()));
-            //    PlaceHolder_Data1.Controls.Add(new LiteralControl("</td>"));
-            //    PlaceHolder_Data1.Controls.Add(new LiteralControl("<td>"));
-            //    PlaceHolder_Data1.Controls.Add(new LiteralControl(dr["status"].ToString()));
-            //    PlaceHolder_Data1.Controls.Add(new LiteralControl("</td>"));
-            //    PlaceHolder_Data1.Controls.Add(new LiteralControl("</tr>"));
-            //}
-            //PlaceHolder_Data1.Controls.Add(new LiteralControl("</tbody></table>"));
-            //conn.Close();
+            RoomTypeService.RoomTypeServiceClient obj = new RoomTypeService.RoomTypeServiceClient();
+            IList<RoomTypeService.RoomTypeInfo> dataInfo = new List<RoomTypeService.RoomTypeInfo>();
+            dataInfo = obj.getRoomType();
+
+            string data = string.Empty;
+            string id = string.Empty;
+            string jumlah = string.Empty;
+
+            foreach (var row in dataInfo)
+            {
+                id = row.TipeRoomType;
+                jumlah = row.PriceRoomType.ToString();
+                data += "<tr> <td>" + id + "</td> <td>" + jumlah + "</td> </tr>";
+            }
+
+            placeHolder.InnerHtml = data;
+                                    
+                                
+              
+            
+
+            
+
+            
+            //dataGridView1.DataSource = dataBarang;
+
+            
+            
+
+            //PlaceHolder1.Controls.Add(new LiteralControl("<table class='table table-bordered data' id='data'>"));
+            //PlaceHolder1.Controls.Add(new LiteralControl("<thead>  <tr>  <th>room name</th> <th>room type</th> </tr>  </thead>  <tbody>"));
+
+            //PlaceHolder1.Controls.Add(new LiteralControl("<tr>"));
+            //PlaceHolder1.Controls.Add(new LiteralControl("<td>"));
+            //PlaceHolder1.Controls.Add(new LiteralControl());
+            //PlaceHolder1.Controls.Add(new LiteralControl("</td>"));
+            //PlaceHolder1.Controls.Add(new LiteralControl("<td>"));
+            //PlaceHolder1.Controls.Add(new LiteralControl());
+            //PlaceHolder1.Controls.Add(new LiteralControl("</td>"));
+            //PlaceHolder1.Controls.Add(new LiteralControl("</tbody></table>"));
+            
         } 
     }
 }

@@ -8,3 +8,8 @@ D:\DFile\Kampus\CCIT\Semester3\PROJECT4\RentHouse_Group8_MutiaAyuDianita_MHudyaR
 D:\DFile\Kampus\CCIT\Semester3\PROJECT4\RentHouse_Group8_MutiaAyuDianita_MHudyaRamadhana\Rent_HouseWeb\Rent_HouseWeb\obj\Debug\Rent_HouseWeb.csprojResolveAssemblyReference.cache
 D:\DFile\Kampus\CCIT\Semester3\PROJECT4\RentHouse_Group8_MutiaAyuDianita_MHudyaRamadhana\Rent_HouseWeb\Rent_HouseWeb\obj\Debug\Rent_HouseWeb.dll
 D:\DFile\Kampus\CCIT\Semester3\PROJECT4\RentHouse_Group8_MutiaAyuDianita_MHudyaRamadhana\Rent_HouseWeb\Rent_HouseWeb\obj\Debug\Rent_HouseWeb.pdb
+D:\DFile\Kampus\CCIT\Semester4\PROJECT3\Rent_HouseWeb\Rent_HouseWeb\obj\Debug\Rent_HouseWeb.csprojResolveAssemblyReference.cache
+D:\DFile\Kampus\CCIT\Semester4\PROJECT3\Rent_HouseWeb\Rent_HouseWeb\obj\Debug\Rent_HouseWeb.dll
+D:\DFile\Kampus\CCIT\Semester4\PROJECT3\Rent_HouseWeb\Rent_HouseWeb\bin\Rent_HouseWeb.dll
+D:\DFile\Kampus\CCIT\Semester4\PROJECT3\Rent_HouseWeb\Rent_HouseWeb\bin\Rent_HouseWeb.pdb
+D:\DFile\Kampus\CCIT\Semester4\PROJECT3\Rent_HouseWeb\Rent_HouseWeb\obj\Debug\Rent_HouseWeb.pdb

@@ -268,7 +268,18 @@
 			 </div>
 			 <div class="col-md-12">
 				    <div class="table-responsive">
-                        <asp:PlaceHolder ID="PlaceHolder_Data1" runat="server"></asp:PlaceHolder>
+                        <table class='table table-bordered data' id='data'>
+                            <thead>
+                            <label>Data Room Type </label>  
+                                <tr>  
+                                    <th>Type</th> 
+                                    <th>Price</th> 
+                                </tr>  
+                            </thead>  
+                            <tbody runat="server" id="placeHolder">
+                                
+                            </tbody>
+                           </table>
                     </div>
 			 </div>
 		  </div>

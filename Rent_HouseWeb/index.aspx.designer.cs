@@ -13,12 +13,12 @@ namespace Rent_HouseWeb {
     public partial class index {
         
         /// <summary>
-        /// PlaceHolder_Data1 control.
+        /// placeHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolder_Data1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl placeHolder;
     }
 }
