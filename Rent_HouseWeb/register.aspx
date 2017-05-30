@@ -30,43 +30,43 @@
   <div class="container col-md-6">
     <h2>User Regist</h2>
 	<hr>
-	<form action="#" method="post">
+	<form action="#" method="post" runat="server">
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Input Email" name="email" required="required" runat="server">
+        <input type="text" class="form-control" id="email" placeholder="Input Email" name="email" required="required" runat="server">
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Input Password" name="password" required="">
+        <input type="password" class="form-control" id="password" placeholder="Input Password" name="password" required="" runat="server">
       </div>
 	  <div class="form-group">
-        <label for="nama">Nama</label>
-        <input type="text" class="form-control" id="nama" placeholder="Input Name" name="nama" required="required">
+        <label for="nama">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Input Name" name="nama" required="required" runat="server">
       </div>
 	  <div class="form-group">
         <label for="nama">Phone Number</label>
-        <input type="text" class="form-control" id="phone" placeholder="Input Phone Number" name="nama" required="required">
+        <input type="text" class="form-control" id="phone" placeholder="Input Phone Number" name="nama" required="required" runat="server">
       </div>
 	  <div class="form-group">
         <label for="nama">Birthdate</label>
-        <input type="text" class="form-control" id="nama" placeholder="(YYYY-MM-DD)" name="nama" required="required">
+        <input type="text" class="form-control" id="birthdate" placeholder="(YYYY-MM-DD)" name="nama" required="required" runat="server">
       </div>
 	  <div class="form-group">
         <label for="nama">Card Type</label>
-        <select type="text" class="form-control" id="nama" name="nama" >
+        <select type="text" class="form-control" id="cardtype" name="nama" runat="server">
 			<option value="KTP"> KTP </option>
 			<option value="KTM"> KTM </option>
 		</select>
       </div>
 	  <div class="form-group">
         <label for="nama">Card Number</label>
-        <input type="text" class="form-control" id="nama" placeholder="Input Card Number" name="nama" required="required">
+        <input type="text" class="form-control" id="cardnumber" placeholder="Input Card Number" name="nama" required="required" runat="server">
       </div>
 	  <div class="form-group">
         <label for="nama">Address</label>
-        <textarea type="text" class="form-control" id="nama" placeholder="Input Card Number" name="nama" required="required"></textarea>
+        <textarea type="text" class="form-control" id="address" placeholder="Input Card Number" name="nama" required="required" runat="server"></textarea>
       </div>
-      <button type="submit" class="btn btn-default">Register</button>
+      <asp:Button type="submit" CssClass="btn btn-default" OnClick="btn_saveClick" runat="server" Text="Register"></asp:Button>
     </form>
   </div>
 

@@ -59,10 +59,16 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="addcustomer.aspx" />
     <Content Include="adminhome.aspx" />
+    <Content Include="customerhome.aspx" />
+    <Content Include="customer_home.aspx" />
     <Content Include="customerlist.aspx" />
+    <Content Include="customer_login.aspx" />
+    <Content Include="customer_logout.aspx" />
     <Content Include="detailtransaction.aspx" />
     <Content Include="index.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="login_customer.aspx" />
+    <Content Include="logout_customer.aspx" />
     <Content Include="monthlypaidlist.aspx" />
     <Content Include="monthlytransaction.aspx" />
     <Content Include="register.aspx" />
@@ -77,6 +83,16 @@
     <None Include="Service References\RoomTypeService\configuration91.svcinfo" />
     <None Include="Service References\RoomTypeService\configuration.svcinfo" />
     <None Include="Service References\RoomTypeService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UserService\Rent_HouseWeb.UserService.UserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserService\UserService.disco" />
+    <None Include="Service References\UserService\configuration91.svcinfo" />
+    <None Include="Service References\UserService\configuration.svcinfo" />
+    <None Include="Service References\UserService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -97,6 +113,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <None Include="Service References\RoomTypeService\RoomTypeService.wsdl" />
+    <None Include="Service References\UserService\UserService.wsdl" />
+    <None Include="Service References\UserService\UserService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserService\UserService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserService\UserService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -148,12 +174,40 @@
     <Compile Include="adminhome.aspx.designer.cs">
       <DependentUpon>adminhome.aspx</DependentUpon>
     </Compile>
+    <Compile Include="customerhome.aspx.cs">
+      <DependentUpon>customerhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customerhome.aspx.designer.cs">
+      <DependentUpon>customerhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer_home.aspx.cs">
+      <DependentUpon>customer_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer_home.aspx.designer.cs">
+      <DependentUpon>customer_home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="customerlist.aspx.cs">
       <DependentUpon>customerlist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="customerlist.aspx.designer.cs">
       <DependentUpon>customerlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer_login.aspx.cs">
+      <DependentUpon>customer_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer_login.aspx.designer.cs">
+      <DependentUpon>customer_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customer_logout.aspx.cs">
+      <DependentUpon>customer_logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer_logout.aspx.designer.cs">
+      <DependentUpon>customer_logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -185,6 +239,20 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login_customer.aspx.cs">
+      <DependentUpon>login_customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login_customer.aspx.designer.cs">
+      <DependentUpon>login_customer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout_customer.aspx.cs">
+      <DependentUpon>logout_customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout_customer.aspx.designer.cs">
+      <DependentUpon>logout_customer.aspx</DependentUpon>
     </Compile>
     <Compile Include="monthlypaidlist.aspx.cs">
       <DependentUpon>monthlypaidlist.aspx</DependentUpon>
@@ -241,6 +309,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\UserService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -268,6 +341,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\RoomTypeService\" />
+    <WCFMetadataStorage Include="Service References\UserService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\RoomTypeService\RoomTypeService.xsd">

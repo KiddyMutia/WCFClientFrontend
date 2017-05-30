@@ -13,5 +13,42 @@ namespace Rent_HouseWeb
         {
 
         }
+
+        protected void btn_saveClick(object sender, EventArgs e)
+        {
+            try
+            {
+                UserService.UserInfo obj = new UserService.UserInfo();
+
+                obj.NameUser = name.Value;
+                obj.EmailUser = email.Value;
+                obj.PasswordUser = password.Value;
+                obj.PhoneNumberUser = phone.Value;
+                obj.BirthdateUser = birthdate.Value;
+                obj.Card_typeUser = cardtype.Value;
+                obj.Card_numberUser = cardnumber.Value;
+                obj.AddressUser = address.Value;
+
+                UserService.UserServiceClient us = new UserService.UserServiceClient();
+                string msg = string.Empty;
+                msg = us.insertUser(obj);
+
+                if (msg != string.Empty)
+                {
+                    //Response.Write("<script>alert('Success Regist')</script>");
+                    Response.Write("<script language=javascript>alert('Success Regist');</script>");
+                    Response.Redirect("login.aspx");
+                }
+                else
+                {
+                    Response.Write("<script language=javascript>alert('Failed Regist, please try again');</script>");
+                }               
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                Response.Write("<script>alert('Failed Regist, please try again')</script>");
+            }
+
+        }
     }
 }
