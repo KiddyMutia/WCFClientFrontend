@@ -19,6 +19,12 @@
   <wsdl:message name="IRoomTypeService_getRoomType_OutputMessage">
     <wsdl:part name="parameters" element="tns:getRoomTypeResponse" />
   </wsdl:message>
+  <wsdl:message name="IRoomTypeService_getReservation_InputMessage">
+    <wsdl:part name="parameters" element="tns:getReservation" />
+  </wsdl:message>
+  <wsdl:message name="IRoomTypeService_getReservation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getReservationResponse" />
+  </wsdl:message>
   <wsdl:portType name="IRoomTypeService">
     <wsdl:operation name="getTotalRoomType">
       <wsdl:input wsaw:Action="http://tempuri.org/IRoomTypeService/getTotalRoomType" message="tns:IRoomTypeService_getTotalRoomType_InputMessage" />
@@ -27,6 +33,10 @@
     <wsdl:operation name="getRoomType">
       <wsdl:input wsaw:Action="http://tempuri.org/IRoomTypeService/getRoomType" message="tns:IRoomTypeService_getRoomType_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IRoomTypeService/getRoomTypeResponse" message="tns:IRoomTypeService_getRoomType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getReservation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRoomTypeService/getReservation" message="tns:IRoomTypeService_getReservation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRoomTypeService/getReservationResponse" message="tns:IRoomTypeService_getReservation_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IRoomTypeService" type="tns:IRoomTypeService">
@@ -42,6 +52,15 @@
     </wsdl:operation>
     <wsdl:operation name="getRoomType">
       <soap:operation soapAction="http://tempuri.org/IRoomTypeService/getRoomType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReservation">
+      <soap:operation soapAction="http://tempuri.org/IRoomTypeService/getReservation" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

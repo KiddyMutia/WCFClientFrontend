@@ -57,25 +57,15 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
-    <Content Include="addcustomer.aspx" />
-    <Content Include="adminhome.aspx" />
     <Content Include="customerhome.aspx" />
-    <Content Include="customer_home.aspx" />
-    <Content Include="customerlist.aspx" />
+    <Content Include="customer_listroom.aspx" />
     <Content Include="customer_login.aspx" />
     <Content Include="customer_logout.aspx" />
-    <Content Include="detailtransaction.aspx" />
+    <Content Include="customer_reservation.aspx" />
     <Content Include="index.aspx" />
-    <Content Include="Login.aspx" />
     <Content Include="login_customer.aspx" />
     <Content Include="logout_customer.aspx" />
-    <Content Include="monthlypaidlist.aspx" />
-    <Content Include="monthlytransaction.aspx" />
     <Content Include="register.aspx" />
-    <Content Include="rentin.aspx" />
-    <Content Include="rentout.aspx" />
-    <Content Include="rentoutlist.aspx" />
-    <Content Include="roomlist.aspx" />
     <None Include="Service References\RoomTypeService\Rent_HouseWeb.RoomTypeService.RoomTypeInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -102,7 +92,6 @@
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
-    <Content Include="updatecustomer.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -160,20 +149,6 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="addcustomer.aspx.cs">
-      <DependentUpon>addcustomer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="addcustomer.aspx.designer.cs">
-      <DependentUpon>addcustomer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="adminhome.aspx.cs">
-      <DependentUpon>adminhome.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="adminhome.aspx.designer.cs">
-      <DependentUpon>adminhome.aspx</DependentUpon>
-    </Compile>
     <Compile Include="customerhome.aspx.cs">
       <DependentUpon>customerhome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -181,19 +156,12 @@
     <Compile Include="customerhome.aspx.designer.cs">
       <DependentUpon>customerhome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="customer_home.aspx.cs">
-      <DependentUpon>customer_home.aspx</DependentUpon>
+    <Compile Include="customer_listroom.aspx.cs">
+      <DependentUpon>customer_listroom.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="customer_home.aspx.designer.cs">
-      <DependentUpon>customer_home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="customerlist.aspx.cs">
-      <DependentUpon>customerlist.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="customerlist.aspx.designer.cs">
-      <DependentUpon>customerlist.aspx</DependentUpon>
+    <Compile Include="customer_listroom.aspx.designer.cs">
+      <DependentUpon>customer_listroom.aspx</DependentUpon>
     </Compile>
     <Compile Include="customer_login.aspx.cs">
       <DependentUpon>customer_login.aspx</DependentUpon>
@@ -209,19 +177,19 @@
     <Compile Include="customer_logout.aspx.designer.cs">
       <DependentUpon>customer_logout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="customer_reservation.aspx.cs">
+      <DependentUpon>customer_reservation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customer_reservation.aspx.designer.cs">
+      <DependentUpon>customer_reservation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="detailtransaction.aspx.cs">
-      <DependentUpon>detailtransaction.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="detailtransaction.aspx.designer.cs">
-      <DependentUpon>detailtransaction.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -232,13 +200,6 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="login_customer.aspx.cs">
       <DependentUpon>login_customer.aspx</DependentUpon>
@@ -254,20 +215,6 @@
     <Compile Include="logout_customer.aspx.designer.cs">
       <DependentUpon>logout_customer.aspx</DependentUpon>
     </Compile>
-    <Compile Include="monthlypaidlist.aspx.cs">
-      <DependentUpon>monthlypaidlist.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="monthlypaidlist.aspx.designer.cs">
-      <DependentUpon>monthlypaidlist.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="monthlytransaction.aspx.cs">
-      <DependentUpon>monthlytransaction.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="monthlytransaction.aspx.designer.cs">
-      <DependentUpon>monthlytransaction.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="register.aspx.cs">
       <DependentUpon>register.aspx</DependentUpon>
@@ -275,34 +222,6 @@
     </Compile>
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="rentin.aspx.cs">
-      <DependentUpon>rentin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="rentin.aspx.designer.cs">
-      <DependentUpon>rentin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="rentout.aspx.cs">
-      <DependentUpon>rentout.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="rentout.aspx.designer.cs">
-      <DependentUpon>rentout.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="rentoutlist.aspx.cs">
-      <DependentUpon>rentoutlist.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="rentoutlist.aspx.designer.cs">
-      <DependentUpon>rentoutlist.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="roomlist.aspx.cs">
-      <DependentUpon>roomlist.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="roomlist.aspx.designer.cs">
-      <DependentUpon>roomlist.aspx</DependentUpon>
     </Compile>
     <Compile Include="Service References\RoomTypeService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -320,13 +239,6 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="updatecustomer.aspx.cs">
-      <DependentUpon>updatecustomer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="updatecustomer.aspx.designer.cs">
-      <DependentUpon>updatecustomer.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -19,6 +19,8 @@ namespace Rent_HouseWeb
             GetDataOrganisasi();
 
         }
+
+
         protected void GetDataOrganisasi()
         {
             RoomTypeService.RoomTypeServiceClient obj = new RoomTypeService.RoomTypeServiceClient();
@@ -36,32 +38,7 @@ namespace Rent_HouseWeb
                 data += "<tr> <td>" + id + "</td> <td>" + jumlah + "</td> </tr>";
             }
 
-            placeHolder.InnerHtml = data;
-                                    
-                                
-              
-            
-
-            
-
-            
-            //dataGridView1.DataSource = dataBarang;
-
-            
-            
-
-            //PlaceHolder1.Controls.Add(new LiteralControl("<table class='table table-bordered data' id='data'>"));
-            //PlaceHolder1.Controls.Add(new LiteralControl("<thead>  <tr>  <th>room name</th> <th>room type</th> </tr>  </thead>  <tbody>"));
-
-            //PlaceHolder1.Controls.Add(new LiteralControl("<tr>"));
-            //PlaceHolder1.Controls.Add(new LiteralControl("<td>"));
-            //PlaceHolder1.Controls.Add(new LiteralControl());
-            //PlaceHolder1.Controls.Add(new LiteralControl("</td>"));
-            //PlaceHolder1.Controls.Add(new LiteralControl("<td>"));
-            //PlaceHolder1.Controls.Add(new LiteralControl());
-            //PlaceHolder1.Controls.Add(new LiteralControl("</td>"));
-            //PlaceHolder1.Controls.Add(new LiteralControl("</tbody></table>"));
-            
+            placeHolder.InnerHtml = data;     
         } 
     }
 }

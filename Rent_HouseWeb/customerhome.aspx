@@ -75,14 +75,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="nav" id="side-menu">
 				
                     <li>
-                        <a href="adminhome.aspx" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboards</span> </a>
+                        <a href="customerhome.aspx" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboards</span> </a>
                     </li>
                    
                     <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Customer</span><span class="fa arrow"></span></a>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Reservation</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="addcustomer.aspx" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i><font color="red">Add Customer</font></a></li>
-                            <li><a href="customerlist.aspx" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i><font color="red">Customer List</font></a></li>
+                            <li><a href="customer_listroom.aspx" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i><font color="red">List Room</font></a></li>
 					   </ul>
                     </li>
                    

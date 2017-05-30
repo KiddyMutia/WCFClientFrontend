@@ -147,6 +147,9 @@ namespace Rent_HouseWeb.RoomTypeService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoomTypeService/getRoomType", ReplyAction="http://tempuri.org/IRoomTypeService/getRoomTypeResponse")]
         Rent_HouseWeb.RoomTypeService.RoomTypeInfo[] getRoomType();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoomTypeService/getReservation", ReplyAction="http://tempuri.org/IRoomTypeService/getReservationResponse")]
+        Rent_HouseWeb.RoomTypeService.RoomTypeInfo[] getReservation(string id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -182,6 +185,10 @@ namespace Rent_HouseWeb.RoomTypeService {
         
         public Rent_HouseWeb.RoomTypeService.RoomTypeInfo[] getRoomType() {
             return base.Channel.getRoomType();
+        }
+        
+        public Rent_HouseWeb.RoomTypeService.RoomTypeInfo[] getReservation(string id) {
+            return base.Channel.getReservation(id);
         }
     }
 }
