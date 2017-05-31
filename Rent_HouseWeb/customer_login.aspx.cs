@@ -19,8 +19,7 @@ namespace Rent_HouseWeb
             string id_user = string.Empty;
             string nama = string.Empty;
             string emailuser = string.Empty;
-            Boolean status = true;
-
+            
             string email = emailfromuser.Value;
             string password = passwordfromuser.Value;
 
@@ -45,8 +44,6 @@ namespace Rent_HouseWeb
                         // Storee Session
                         Session["id_user"] = id_user;
                         Session["nama"] = nama;
-                        Session["email"] = email;
-                        Session["token"] = status;
                         Session.Timeout = 60; //15min
                         // Redirecting to Welcomepage.
                         Response.Redirect("customerhome.aspx");

@@ -11,16 +11,25 @@ namespace Rent_HouseWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string id = this.Request["id"];
-            MethodGetId(id);
-            lbl_name.Text = Session["nama"].ToString() + "";
-            tb_idroom.Enabled = false;
-            tb_idroom.Visible = false;
-            tb_idcust.Enabled = false;
-            tb_idcust.Visible = false;
-            user_name.Enabled = false;
-            tb_name.Enabled = false;
-            tb_price.Enabled = false;
+            if (Session["nama"] == null) // if it will not find Session user it will redirect to login page.
+            {
+                Response.Redirect("customer_login.aspx");
+            }
+            else
+            {
+                string id = this.Request["id"];
+
+                MethodGetId(id);
+
+                lbl_name.Text = Session["nama"].ToString() + "";
+                tb_idroom.Enabled = false;
+                tb_idroom.Visible = false;
+                tb_idcust.Enabled = false;
+                tb_idcust.Visible = false;
+                user_name.Enabled = false;
+                tb_name.Enabled = false;
+                tb_price.Enabled = false;
+            }
         }
 
         protected void MethodGetId(string id)
@@ -34,6 +43,7 @@ namespace Rent_HouseWeb
                 foreach (var x in dataInfo)
                 {
                     tb_idcust.Text = Session["id_user"].ToString();
+                    user_name.Text = Session["nama"].ToString();
                     tb_idroom.Text = x.IDRoomType;
                     tb_name.Text = x.TipeRoomType;
                     tb_price.Text = x.PriceRoomType.ToString();
