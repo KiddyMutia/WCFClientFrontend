@@ -42,7 +42,7 @@ namespace Rent_HouseWeb
                 tipe = row.TipeRoomType;
                 info = row.InfoRoomType;
                 harga = row.PriceRoomType.ToString();
-                data += "<tr> <td>" + tipe + "</td> <td>" + harga + "</td> <td>" + info + "</td> <td> <a class='btn btn-info' href=customer_reservation.aspx?id=" + id + ">Reserve </a> </td> </tr>";
+                data += "<tr> <td>" + tipe + "</td> <td>" + harga + "</td> <td>" + info + "</td> <td> <a class='btn btn-info' href=customer_reservation.aspx?id=" + id + ">Reserve</a> </td> </tr>";
             }
 
             placeHolder.InnerHtml = data;

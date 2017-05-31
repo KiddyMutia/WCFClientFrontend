@@ -13,8 +13,6 @@ namespace Rent_HouseWeb
         {
             Session.Remove("id_user");
             Session.Remove("nama");
-            Session.Remove("email");
-            Session.Remove("token");
             Session.Contents.RemoveAll();
             Session.RemoveAll();
             Response.Redirect("customer_login.aspx");
