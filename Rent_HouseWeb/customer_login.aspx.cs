@@ -50,7 +50,8 @@ namespace Rent_HouseWeb
                     }
                     else
                     {
-                        //Response.Redirect("customer_home.aspx");
+                        //Response.Redirect("customer_login.aspx");
+                        lbl_error.Text = "Invalid Username Or Password !";
                     }
 
 
@@ -61,6 +62,7 @@ namespace Rent_HouseWeb
             catch (Exception ex)
             {
                 //Response.Write("<script>alert('" + ex + "')</script>");
+                lbl_error.Text = "Invalid Username Or Password !";
             }
         }    
     }

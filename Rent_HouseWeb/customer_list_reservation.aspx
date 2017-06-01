@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="customer_listroom.aspx.cs" Inherits="Rent_HouseWeb.customer_listroom" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="customer_list_reservation.aspx.cs" Inherits="Rent_HouseWeb.customer_list_reservation" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -185,31 +185,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <table class='table table-bordered data' id='data'>
                             <thead>  
                                 <tr>  
-                                    <th>Type</th>  
-                                    <th>Price</th> 
-                                    <th>Information</th>  
-                                    <th>Option</th>  
+                                    <th>ID Reservation</th>  
+                                    <th>Room Type</th> 
+                                    <th>Customer</th>  
+                                    <th>Date Time</th>  
+                                    <th>Info</th>  
+                                    <th>Status</th>  
                                 </tr>  
                             </thead>  
                             <tbody id="placeHolder" runat="server">
 
                             </tbody>
                     </div>
-                    
-
-                    <div class="table-responsive">
-                        <table class='table table-bordered data' id='Table2'>
-                            <thead>  
-                                <tr>  
-                                    <th>Type</th>  
-                                    <th>Total</th> 
-                                </tr>  
-                            </thead>  
-                            <tbody id="Tbody1" runat="server">
-
-                            </tbody>
-                    </div>
-				
 				</div>
 				<div class="clearfix"> </div>
 			</div>

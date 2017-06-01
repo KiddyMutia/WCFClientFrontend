@@ -103,7 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <h1> <a class="navbar-brand" href="adminhome.aspx">Rent House</a></h1>         
+               <h1> <a class="navbar-brand" href="customerhome.aspx">My Kost</a></h1>         
 			   </div>
 			 <div class=" border-bottom">
         	<div class="full-left">
@@ -132,49 +132,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  
 		    <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
-               <ul class="nav" id="side-menu">
+                <ul class="nav" id="side-menu">
 				
                     <li>
-                        <a href="adminhome.aspx" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboards</span> </a>
+                        <a href="customerhome.aspx" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboard</span> </a>
                     </li>
                    
                     <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Customer</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="addcustomer.aspx" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Add Customer</a></li>
-                            <li><a href="customerlist.aspx" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Customer List</a></li>
-					   </ul>
+                        <a href="customer_listroom.aspx" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Reservation</span><span class="fa arrow"></span></a>
                     </li>
-					<li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Room</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="addroom.aspx" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Add Room</a></li>
-							<li><a href="roomlist.aspx" class=" hvr-bounce-to-right"><i class="fa fa-file-text-o nav_icon"></i>Room List</a></li>
-					   </ul>
+                    <li>
+                        <a href="customer_list_transaction.aspx" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Transaction List</span><span class="fa arrow"></span></a>
                     </li>
-					<li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Room Type</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="addroomtype.aspx" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Add Room Type</a></li>
-                            <li><a href="roomtypelist.aspx" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Room Type List</a></li>
-					   </ul>
-                    </li>
-					<li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Transaction</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="rentin.aspx" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Rent In</a></li>
-                            <li><a href="rentoutlist.aspx" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Rent Out List</a></li>
-							<li><a href="transactionlist.aspx" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Transaction List</a></li>
-					   </ul>
-                    </li>
-					<li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Monthly Paid</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="addmonthlypaid.aspx" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Add Monthly Paid</a></li>
-                            <li><a href="monthlypaidlist.aspx" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Transaction List</a></li>
-					   </ul>
-                    </li>
-					 
                    
                 </ul>
             </div>
@@ -221,6 +190,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <label for="inputEmail3" class="col-sm-2 control-label hor-form">Price</label>
                             <div class="col-sm-10">
                               <asp:TextBox type="text" CssClass="form-control" ID="tb_price" placeholder="Price of Room" runat="server" required=""></asp:TextBox>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label hor-form">Information</label>
+                            <div class="col-sm-10">
+                              <asp:TextBox type="text" CssClass="form-control" ID="tb_info" placeholder="Put your message here" runat="server" required=""></asp:TextBox>
                             </div>
                           </div>
                         <hr />

@@ -43,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <h1> <a class="navbar-brand" href="adminhome.aspx">Rent House</a></h1>         
+               <h1> <a class="navbar-brand" href="customerhome.aspx">Rent House</a></h1>         
 			   </div>
 			 <div class=" border-bottom">
         	<div class="full-left">
@@ -75,14 +75,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="nav" id="side-menu">
 				
                     <li>
-                        <a href="customerhome.aspx" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboards</span> </a>
+                        <a href="customerhome.aspx" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboard</span> </a>
                     </li>
                    
                     <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Reservation</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="customer_listroom.aspx" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i><font color="red">List Room</font></a></li>
-					   </ul>
+                        <a href="customer_listroom.aspx" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Reservation</span><span class="fa arrow"></span></a>
+                    </li>
+                    <li>
+                        <a href="customer_list_transaction.aspx" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Transaction List</span><span class="fa arrow"></span></a>
                     </li>
                    
                 </ul>

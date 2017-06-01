@@ -76,6 +76,15 @@ namespace Rent_HouseWeb {
         protected global::System.Web.UI.WebControls.TextBox tb_price;
         
         /// <summary>
+        /// tb_info control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_info;
+        
+        /// <summary>
         /// btn control.
         /// </summary>
         /// <remarks>

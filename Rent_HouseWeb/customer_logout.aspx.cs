@@ -15,6 +15,10 @@ namespace Rent_HouseWeb
             Session.Remove("nama");
             Session.Contents.RemoveAll();
             Session.RemoveAll();
+            if (Request.Cookies["LoginCookies"] != null)
+            {
+                Response.Cookies["LoginCookies"].Expires = DateTime.Now.AddDays(-1);
+            }
             Response.Redirect("customer_login.aspx");
         }
     }

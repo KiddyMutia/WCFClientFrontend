@@ -18,17 +18,24 @@ namespace Rent_HouseWeb
             else
             {
                 string id = this.Request["id"];
+                if (id != null)
+                {
+                    MethodGetId(id);
 
-                MethodGetId(id);
-
-                lbl_name.Text = Session["nama"].ToString() + "";
-                tb_idroom.Enabled = false;
-                tb_idroom.Visible = false;
-                tb_idcust.Enabled = false;
-                tb_idcust.Visible = false;
-                user_name.Enabled = false;
-                tb_name.Enabled = false;
-                tb_price.Enabled = false;
+                    lbl_name.Text = Session["nama"].ToString() + "";
+                    tb_idroom.Enabled = false;
+                    tb_idroom.Visible = false;
+                    tb_idcust.Enabled = false;
+                    tb_idcust.Visible = false;
+                    user_name.Enabled = false;
+                    tb_name.Enabled = false;
+                    tb_price.Enabled = false;
+                }
+                else
+                {
+                    Response.Redirect("customer_listroom.aspx");
+                }
+                
             }
         }
 
@@ -60,13 +67,31 @@ namespace Rent_HouseWeb
         {
             try
             {
-                
+                ReservationService.ReservationInfo obj = new ReservationService.ReservationInfo();
+
+                obj.IDRoomReservation = tb_idroom.Text;
+                obj.IDCustomerReservation = tb_idcust.Text;
+                obj.InfoReservation = tb_info.Text;
+
+                ReservationService.ReservationServiceClient us = new ReservationService.ReservationServiceClient();
+                string msg = string.Empty;
+                msg = us.insertData(obj);
+
+                if (msg != string.Empty)
+                {
+                    //Response.Write("<script>alert('Success Regist')</script>");
+                    Response.Write("<script language=javascript>alert('Success Regist');</script>");
+                    Response.Redirect("customer_list_reservation.aspx");
+                }
+                else
+                {
+                    Response.Write("<script language=javascript>alert('Failed Regist, please try again');</script>");
+                }               
 
             }
-            catch (System.Data.SqlClient.SqlException ex)
+            catch (Exception ex)
             {
-               
-
+                Response.Write("<script language=javascript>alert('Failed Regist, please try again');</script>");
             }
 
         }

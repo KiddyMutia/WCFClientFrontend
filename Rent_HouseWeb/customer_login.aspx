@@ -27,6 +27,7 @@
 
   <div class="container col-md-6">
     <h2>User Login</h2>
+    <asp:Label ID="lbl_error" CssClass="label label-danger" role="danger" runat="server"></asp:Label>
 	<form id="Form1" action="#" method="post" runat="server">
       <div class="form-group">
         <label for="email">Email</label>
