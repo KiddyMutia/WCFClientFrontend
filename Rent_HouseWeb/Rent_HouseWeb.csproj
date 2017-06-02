@@ -67,6 +67,7 @@
     <Content Include="index.aspx" />
     <Content Include="login_customer.aspx" />
     <Content Include="logout_customer.aspx" />
+    <Content Include="NewsDetail.aspx" />
     <Content Include="register.aspx" />
     <None Include="Service References\MonthPaidService\MonthPaidService.wsdl" />
     <None Include="Service References\MonthPaidService\MonthPaidService.xsd">
@@ -271,6 +272,13 @@
     <Compile Include="logout_customer.aspx.designer.cs">
       <DependentUpon>logout_customer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="NewsDetail.aspx.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsDetail.aspx.designer.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="register.aspx.cs">
       <DependentUpon>register.aspx</DependentUpon>
@@ -306,6 +314,7 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="sqlconnection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

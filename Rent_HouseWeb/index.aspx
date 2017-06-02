@@ -2,7 +2,6 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -283,6 +282,30 @@
                     </div>
 			 </div>
 		  </div>
+          <div class="row">
+			
+			<div class="col-md-6 col-md-offset-3 text-center wrap_title">
+				<h2>Latest News</h2>
+				<p class="lead" style="margin-top:0">News from the My Kost</p>
+			 </div>
+			 <div class="col-md-12">
+				    <div class="row" runat="server" id="placeHolderBerita">
+                    <!-- start -->
+                   <asp:PlaceHolder runat="server" ID="placeHolderr"></asp:PlaceHolder>
+                      <!--<div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="..." alt="...">
+                          <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                          </div>
+                        </div>
+                      </div>-->
+                      <!-- sini -->
+                    </div>
+			 </div>
+		  </div>
 		  
 		</div>
 	</div>
@@ -295,9 +318,9 @@
 			
 			<div class="col-md-6 col-md-offset-3 text-center">
 				<div class="mockup-content">
-                      <a href="#" class="btn-lg btn-info button">Login for reservation</a>
+                      <a href="login_customer.aspx" class="btn-lg btn-info button">Login for reservation</a>
                       <hr>
-                      <a href="#" class="btn-lg btn-danger button">Don't have account ? Register Here !</a>
+                      <a href="register.aspx" class="btn-lg btn-danger button">Don't have account ? Register Here !</a>
 				</div>
 			</div>	
 			</div>

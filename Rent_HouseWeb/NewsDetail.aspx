@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="customer_login.aspx.cs" Inherits="Rent_HouseWeb.customer_login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewsDetail.aspx.cs" Inherits="Rent_HouseWeb.NewsDetail" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -26,19 +26,12 @@
 <div class="container" style=" ">
 
   <div class="container col-md-6">
-    <h2>User Login</h2>
-    <asp:Label ID="lbl_error" CssClass="label label-danger" role="danger" runat="server"></asp:Label>
-	<form id="Form1" action="#" method="post" runat="server">
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="text" class="form-control" id="emailfromuser" placeholder="Masukkan Email" name="email" required="required" runat="server">
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" id="passwordfromuser" placeholder="Masukkan Password" name="password" required="" runat="server">
-      </div>
-      <asp:Button ID="Button1" type="submit" CssClass="btn btn-info" Text="Login" OnClick="btn_loginClick" runat="server"></asp:Button>
-    </form>
+      <div class="thumbnail">
+            <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>...</p>
+             </div>
+      </div>                      
   </div>
 
 </div>
