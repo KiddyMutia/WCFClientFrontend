@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewsDetail.aspx.cs" Inherits="Rent_HouseWeb.NewsDetail" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login_admin.aspx.cs" Inherits="Rent_HouseWeb.login_admin" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-  <title>My Kost | Customer Login</title>
+  <title>My Kost | Admin Login</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -26,12 +26,19 @@
 <div class="container" style=" ">
 
   <div class="container col-md-6">
-      <div class="thumbnail">
-            <div class="caption">
-                <h3>Thumbnail label</h3>
-                <p>...</p>
-             </div>
-      </div>                      
+    <h2>Admin Login</h2>
+    <asp:Label ID="lbl_error" CssClass="label label-danger" role="danger" runat="server"></asp:Label>
+	<form id="Form1" action="#" method="post" runat="server">
+      <div class="form-group">
+        <label for="email">Username</label>
+        <input type="text" class="form-control" id="usernameadmin" placeholder="Masukkan Email" name="email" required="required" runat="server">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="passwordadmin" placeholder="Masukkan Password" name="password" required="" runat="server">
+      </div>
+      <asp:Button ID="Button1" type="submit" CssClass="btn btn-info" Text="Login" OnClick="btn_loginClick" runat="server"></asp:Button>
+    </form>
   </div>
 
 </div>

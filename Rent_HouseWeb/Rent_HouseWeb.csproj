@@ -57,6 +57,10 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="adminhome.aspx" />
+    <Content Include="admin_add_news.aspx" />
+    <Content Include="admin_edit_news.aspx" />
+    <Content Include="admin_list_news.aspx" />
     <Content Include="customer_list_transaction.aspx" />
     <Content Include="customerhome.aspx" />
     <Content Include="customer_listroom.aspx" />
@@ -65,10 +69,24 @@
     <Content Include="customer_logout.aspx" />
     <Content Include="customer_reservation.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="login_admin.aspx" />
     <Content Include="login_customer.aspx" />
+    <Content Include="logout_admin.aspx" />
     <Content Include="logout_customer.aspx" />
-    <Content Include="NewsDetail.aspx" />
     <Content Include="register.aspx" />
+    <None Include="Service References\AdminService\AdminService.wsdl" />
+    <None Include="Service References\AdminService\AdminService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdminService\AdminService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdminService\AdminService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdminService\Rent_HouseWeb.AdminService.AdminInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\MonthPaidService\MonthPaidService.wsdl" />
     <None Include="Service References\MonthPaidService\MonthPaidService.xsd">
       <SubType>Designer</SubType>
@@ -126,6 +144,13 @@
     <None Include="Service References\MonthPaidService\configuration91.svcinfo" />
     <None Include="Service References\MonthPaidService\configuration.svcinfo" />
     <None Include="Service References\MonthPaidService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AdminService\AdminService.disco" />
+    <None Include="Service References\AdminService\configuration91.svcinfo" />
+    <None Include="Service References\AdminService\configuration.svcinfo" />
+    <None Include="Service References\AdminService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -191,6 +216,34 @@
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminhome.aspx.cs">
+      <DependentUpon>adminhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminhome.aspx.designer.cs">
+      <DependentUpon>adminhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_add_news.aspx.cs">
+      <DependentUpon>admin_add_news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_add_news.aspx.designer.cs">
+      <DependentUpon>admin_add_news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_edit_news.aspx.cs">
+      <DependentUpon>admin_edit_news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_edit_news.aspx.designer.cs">
+      <DependentUpon>admin_edit_news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_list_news.aspx.cs">
+      <DependentUpon>admin_list_news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_list_news.aspx.designer.cs">
+      <DependentUpon>admin_list_news.aspx</DependentUpon>
     </Compile>
     <Compile Include="customer_list_transaction.aspx.cs">
       <DependentUpon>customer_list_transaction.aspx</DependentUpon>
@@ -258,12 +311,26 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="login_admin.aspx.cs">
+      <DependentUpon>login_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login_admin.aspx.designer.cs">
+      <DependentUpon>login_admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login_customer.aspx.cs">
       <DependentUpon>login_customer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="login_customer.aspx.designer.cs">
       <DependentUpon>login_customer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout_admin.aspx.cs">
+      <DependentUpon>logout_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout_admin.aspx.designer.cs">
+      <DependentUpon>logout_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="logout_customer.aspx.cs">
       <DependentUpon>logout_customer.aspx</DependentUpon>
@@ -272,13 +339,6 @@
     <Compile Include="logout_customer.aspx.designer.cs">
       <DependentUpon>logout_customer.aspx</DependentUpon>
     </Compile>
-    <Compile Include="NewsDetail.aspx.cs">
-      <DependentUpon>NewsDetail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="NewsDetail.aspx.designer.cs">
-      <DependentUpon>NewsDetail.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="register.aspx.cs">
       <DependentUpon>register.aspx</DependentUpon>
@@ -286,6 +346,11 @@
     </Compile>
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AdminService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\MonthPaidService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -327,6 +392,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AdminService\" />
     <WCFMetadataStorage Include="Service References\MonthPaidService\" />
     <WCFMetadataStorage Include="Service References\ReservationService\" />
     <WCFMetadataStorage Include="Service References\RoomTypeService\" />
